@@ -1,0 +1,15 @@
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\bin\Debug\net8.0\Proje_11_Collections.exe
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\bin\Debug\net8.0\Proje_11_Collections.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\bin\Debug\net8.0\Proje_11_Collections.runtimeconfig.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\bin\Debug\net8.0\Proje_11_Collections.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\bin\Debug\net8.0\Proje_11_Collections.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\refint\Proje_11_Collections.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\Proje_11_Collections.genruntimeconfig.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje11_Collections\Proje_11_Collections\obj\Debug\net8.0\ref\Proje_11_Collections.dll

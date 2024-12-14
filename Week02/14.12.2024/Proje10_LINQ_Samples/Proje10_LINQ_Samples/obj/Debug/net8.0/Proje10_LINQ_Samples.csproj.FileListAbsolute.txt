@@ -1,0 +1,15 @@
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\bin\Debug\net8.0\Proje10_LINQ_Samples.exe
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\bin\Debug\net8.0\Proje10_LINQ_Samples.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\bin\Debug\net8.0\Proje10_LINQ_Samples.runtimeconfig.json
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\bin\Debug\net8.0\Proje10_LINQ_Samples.dll
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\bin\Debug\net8.0\Proje10_LINQ_Samples.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.dll
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\refint\Proje10_LINQ_Samples.dll
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\Proje10_LINQ_Samples.genruntimeconfig.cache
+D:\GitHubb\BackendMasteryBootcamp\Week01\08-12-2024\Proje10_LINQ_Samples\Proje10_LINQ_Samples\obj\Debug\net8.0\ref\Proje10_LINQ_Samples.dll

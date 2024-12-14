@@ -1,0 +1,15 @@
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\bin\Debug\net8.0\Proje12_Generics.exe
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\bin\Debug\net8.0\Proje12_Generics.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\bin\Debug\net8.0\Proje12_Generics.runtimeconfig.json
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\bin\Debug\net8.0\Proje12_Generics.dll
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\bin\Debug\net8.0\Proje12_Generics.pdb
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.GeneratedMSBuildEditorConfig.editorconfig
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.AssemblyInfoInputs.cache
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.AssemblyInfo.cs
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.csproj.CoreCompileInputs.cache
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.sourcelink.json
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.dll
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\refint\Proje12_Generics.dll
+d:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\Proje12_Generics.genruntimeconfig.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\14.12.2024\Proje12_Generics\obj\Debug\net8.0\ref\Proje12_Generics.dll
