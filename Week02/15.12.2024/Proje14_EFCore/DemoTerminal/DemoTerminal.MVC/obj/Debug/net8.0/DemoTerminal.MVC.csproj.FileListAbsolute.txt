@@ -37,3 +37,5 @@ D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\
 D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.MVC\bin\Debug\net8.0\DemoTerminal.Entity.dll
 D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.MVC\bin\Debug\net8.0\DemoTerminal.Data.pdb
 D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.MVC\bin\Debug\net8.0\DemoTerminal.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.MVC\bin\Debug\net8.0\DemoTerminal.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.MVC\bin\Debug\net8.0\DemoTerminal.Shared.pdb

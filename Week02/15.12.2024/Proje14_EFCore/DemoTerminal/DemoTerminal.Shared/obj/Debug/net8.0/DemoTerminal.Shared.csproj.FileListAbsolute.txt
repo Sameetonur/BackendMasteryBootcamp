@@ -1,0 +1,12 @@
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\bin\Debug\net8.0\DemoTerminal.Shared.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\bin\Debug\net8.0\DemoTerminal.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\bin\Debug\net8.0\DemoTerminal.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\refint\DemoTerminal.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\DemoTerminal.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Shared\obj\Debug\net8.0\ref\DemoTerminal.Shared.dll

@@ -10,3 +10,7 @@ D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\
 D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\refint\DemoTerminal.Entity.dll
 D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.pdb
 D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\ref\DemoTerminal.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\bin\Debug\net8.0\DemoTerminal.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\bin\Debug\net8.0\DemoTerminal.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerm.F71D8E45.Up2Date
