@@ -1,0 +1,78 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DemoVs.MVC/1.0.0": {
+        "dependencies": {
+          "DemoVS.Business": "1.0.0",
+          "DemoVS.Shared": "1.0.0"
+        },
+        "runtime": {
+          "DemoVs.MVC.dll": {}
+        }
+      },
+      "DemoVS.Business/1.0.0": {
+        "dependencies": {
+          "DemoVS.Data": "1.0.0",
+          "DemoVS.Shared": "1.0.0"
+        },
+        "runtime": {
+          "DemoVS.Business.dll": {}
+        }
+      },
+      "DemoVS.Data/1.0.0": {
+        "dependencies": {
+          "DemoVS.Entity": "1.0.0",
+          "DemoVS.Shared": "1.0.0"
+        },
+        "runtime": {
+          "DemoVS.Data.dll": {}
+        }
+      },
+      "DemoVS.Entity/1.0.0": {
+        "dependencies": {
+          "DemoVS.Shared": "1.0.0"
+        },
+        "runtime": {
+          "DemoVS.Entity.dll": {}
+        }
+      },
+      "DemoVS.Shared/1.0.0": {
+        "runtime": {
+          "DemoVS.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DemoVs.MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoVS.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoVS.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoVS.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoVS.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

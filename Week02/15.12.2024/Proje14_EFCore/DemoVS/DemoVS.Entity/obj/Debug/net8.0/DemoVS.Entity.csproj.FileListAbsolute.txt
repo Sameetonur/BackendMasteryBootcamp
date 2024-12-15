@@ -1,0 +1,16 @@
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\bin\Debug\net8.0\DemoVS.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\bin\Debug\net8.0\DemoVS.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\bin\Debug\net8.0\DemoVS.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\bin\Debug\net8.0\DemoVS.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\bin\Debug\net8.0\DemoVS.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.E.D8BD24FF.Up2Date
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\refint\DemoVS.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\DemoVS.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Entity\obj\Debug\net8.0\ref\DemoVS.Entity.dll

@@ -1,0 +1,12 @@
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\bin\Debug\net8.0\DemoVS.Shared.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\bin\Debug\net8.0\DemoVS.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\bin\Debug\net8.0\DemoVS.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\refint\DemoVS.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\DemoVS.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoVS\DemoVS.Shared\obj\Debug\net8.0\ref\DemoVS.Shared.dll

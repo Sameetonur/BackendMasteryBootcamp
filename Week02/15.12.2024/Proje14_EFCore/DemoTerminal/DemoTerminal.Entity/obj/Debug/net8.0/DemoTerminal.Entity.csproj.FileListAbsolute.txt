@@ -1,0 +1,12 @@
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\bin\Debug\net8.0\DemoTerminal.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\bin\Debug\net8.0\DemoTerminal.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\bin\Debug\net8.0\DemoTerminal.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\refint\DemoTerminal.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\DemoTerminal.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\DemoTerminal\DemoTerminal.Entity\obj\Debug\net8.0\ref\DemoTerminal.Entity.dll

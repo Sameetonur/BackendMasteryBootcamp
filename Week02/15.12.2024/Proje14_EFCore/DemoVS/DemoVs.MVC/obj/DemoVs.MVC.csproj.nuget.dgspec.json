@@ -1,0 +1,361 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVs.MVC\\DemoVs.MVC.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Business\\DemoVS.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Business\\DemoVS.Business.csproj",
+        "projectName": "DemoVS.Business",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Business\\DemoVS.Business.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Data\\DemoVS.Data.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Data\\DemoVS.Data.csproj"
+              },
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Data\\DemoVS.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Data\\DemoVS.Data.csproj",
+        "projectName": "DemoVS.Data",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Data\\DemoVS.Data.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Entity\\DemoVS.Entity.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Entity\\DemoVS.Entity.csproj"
+              },
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Entity\\DemoVS.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Entity\\DemoVS.Entity.csproj",
+        "projectName": "DemoVS.Entity",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Entity\\DemoVS.Entity.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVs.MVC\\DemoVs.MVC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVs.MVC\\DemoVs.MVC.csproj",
+        "projectName": "DemoVs.MVC",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVs.MVC\\DemoVs.MVC.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVs.MVC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Business\\DemoVS.Business.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Business\\DemoVS.Business.csproj"
+              },
+              "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj",
+        "projectName": "DemoVS.Shared",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\DemoVS.Shared.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\DemoVS\\DemoVS.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
