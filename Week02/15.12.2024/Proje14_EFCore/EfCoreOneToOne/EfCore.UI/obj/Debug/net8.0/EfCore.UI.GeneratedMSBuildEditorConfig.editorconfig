@@ -9,31 +9,31 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EfCore.UI
 build_property.RootNamespace = EfCore.UI
-build_property.ProjectDir = D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\EfCore\EfCore.UI\
+build_property.ProjectDir = D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\EfCoreOneToOne\EfCore.UI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\EfCore\EfCore.UI
+build_property.MSBuildProjectDirectory = D:\GitHubb\BackendMasteryBootcamp\Week02\15.12.2024\Proje14_EFCore\EfCoreOneToOne\EfCore.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCore/EfCore.UI/Views/Home/Index.cshtml]
+[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCoreOneToOne/EfCore.UI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCore/EfCore.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCoreOneToOne/EfCore.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCore/EfCore.UI/Views/_ViewImports.cshtml]
+[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCoreOneToOne/EfCore.UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCore/EfCore.UI/Views/_ViewStart.cshtml]
+[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCoreOneToOne/EfCore.UI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCore/EfCore.UI/Views/Shared/_Layout.cshtml]
+[D:/GitHubb/BackendMasteryBootcamp/Week02/15.12.2024/Proje14_EFCore/EfCoreOneToOne/EfCore.UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6lid60eve3

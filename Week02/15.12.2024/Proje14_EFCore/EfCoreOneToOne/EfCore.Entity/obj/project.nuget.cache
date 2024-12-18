@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fj0GFwdWy1s=",
+  "dgSpecHash": "D3SZwhZ5E8k=",
   "success": true,
-  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\EfCore\\EfCore.Entity\\EfCore.Entity.csproj",
+  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\EfCoreOneToOne\\EfCore.Entity\\EfCore.Entity.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

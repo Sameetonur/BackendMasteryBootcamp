@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9WIjiGIV8GA=",
+  "dgSpecHash": "BHS3dMISc60=",
   "success": true,
-  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\EfCore\\EfCore.Business\\EfCore.Business.csproj",
+  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week02\\15.12.2024\\Proje14_EFCore\\EfCoreOneToOne\\EfCore.Business\\EfCore.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samet\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

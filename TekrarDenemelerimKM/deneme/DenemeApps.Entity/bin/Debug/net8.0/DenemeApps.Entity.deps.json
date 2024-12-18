@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DenemeApps.Entity/1.0.0": {
+        "dependencies": {
+          "DenemeApps.Shared": "1.0.0"
+        },
+        "runtime": {
+          "DenemeApps.Entity.dll": {}
+        }
+      },
+      "DenemeApps.Shared/1.0.0": {
+        "runtime": {
+          "DenemeApps.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DenemeApps.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DenemeApps.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

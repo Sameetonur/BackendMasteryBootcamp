@@ -1,0 +1,11 @@
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\bin\Debug\net8.0\DenemeApps.Shared.deps.json
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\bin\Debug\net8.0\DenemeApps.Shared.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\bin\Debug\net8.0\DenemeApps.Shared.pdb
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\DenemeApps.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\DenemeApps.Shared.AssemblyInfoInputs.cache
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\DenemeApps.Shared.AssemblyInfo.cs
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\DenemeApps.Shared.csproj.CoreCompileInputs.cache
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\DenemeApps.Shared.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\refint\DenemeApps.Shared.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\DenemeApps.Shared.pdb
+C:\Users\samet\Desktop\deneme\DenemeApps.Shared\obj\Debug\net8.0\ref\DenemeApps.Shared.dll

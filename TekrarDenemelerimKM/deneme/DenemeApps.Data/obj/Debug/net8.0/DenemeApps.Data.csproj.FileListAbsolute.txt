@@ -1,0 +1,17 @@
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Data.deps.json
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Data.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Data.pdb
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Entity.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Shared.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Entity.pdb
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\bin\Debug\net8.0\DenemeApps.Shared.pdb
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.csproj.AssemblyReference.cache
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.AssemblyInfoInputs.cache
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.AssemblyInfo.cs
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.csproj.CoreCompileInputs.cache
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeAp.404F5A9D.Up2Date
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\refint\DenemeApps.Data.dll
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\DenemeApps.Data.pdb
+C:\Users\samet\Desktop\deneme\DenemeApps.Data\obj\Debug\net8.0\ref\DenemeApps.Data.dll
