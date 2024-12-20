@@ -1,0 +1,15 @@
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\bin\Debug\net8.0\SametApp.Entity.deps.json
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\bin\Debug\net8.0\SametApp.Entity.dll
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\bin\Debug\net8.0\SametApp.Entity.pdb
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\bin\Debug\net8.0\SametApp.Shared.dll
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\bin\Debug\net8.0\SametApp.Shared.pdb
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.csproj.AssemblyReference.cache
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.AssemblyInfoInputs.cache
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.AssemblyInfo.cs
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.A08DE114.Up2Date
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.dll
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\refint\SametApp.Entity.dll
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\SametApp.Entity.pdb
+C:\Users\samet\Desktop\SametApp\SametApp.Entity\obj\Debug\net8.0\ref\SametApp.Entity.dll
