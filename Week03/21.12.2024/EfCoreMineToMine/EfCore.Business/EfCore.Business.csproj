@@ -11,8 +11,4 @@
     <ProjectReference Include="..\EfCore.Shared\EfCore.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contrete\" />
-  </ItemGroup>
-
 </Project>

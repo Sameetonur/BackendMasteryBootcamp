@@ -1,3 +1,5 @@
+using EfCore.Business.Abstract;
+using EfCore.Business.Contrete;
 using EfCore.Data.Abstract;
 using EfCore.Data.Concrate.Context;
 using EfCore.Data.Concrate.Repositories;
@@ -10,6 +12,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 
 var app = builder.Build();
