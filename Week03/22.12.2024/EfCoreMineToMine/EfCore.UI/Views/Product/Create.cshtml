@@ -24,7 +24,8 @@
         @foreach(var category in Model.CategoryList)
         {
             <div >
-                <input type="Checkbox" name="CategoryIds"/>
+                <input type="Checkbox" name="CategoryIds " value="@category.Id"
+                 @(Model.CategoryIds.Any(x => x==category.Id) ? "checked" : "")/>
                 <label>@category.Name</label>
             </div>
         }

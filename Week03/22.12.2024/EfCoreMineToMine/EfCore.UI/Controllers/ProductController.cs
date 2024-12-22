@@ -48,7 +48,14 @@ namespace EfCore.UI.Controllers
 
         public async Task<ActionResult> Create(ProductCreateDTO productCreateDto)
         {
-           return View();
+            if(ModelState.IsValid)
+            {
+                var product = await _productService.CreateAsync(productCreateDto);
+                return RedirectToAction("Index");
+            }
+            productCreateDto.CategoryList = await GetCategoryListAsync();
+            
+           return View(productCreateDto);
         }
         
         
