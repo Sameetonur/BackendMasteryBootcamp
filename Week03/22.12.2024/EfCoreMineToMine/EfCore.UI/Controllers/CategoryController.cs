@@ -1,5 +1,6 @@
 using EfCore.Business.Abstract;
 using EfCore.Business.Contrete;
+using EfCore.Data.Concrate.Repositories;
 using EfCore.Shared.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,15 +15,23 @@ namespace EfCore.UI.Controllers
         {
             _categoryService = categoryService;
         }
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var categories = await _categoryService.GetCategoriesAsync();
+            if (categories==null){
+                categories = new List<CategoryDTO>();
+            }
+            
+                
+            
+            return View(categories);
         }
 
-        public async Task<ActionResult> Create()
+        public ActionResult Create()
         {
-            return View();
+            return  View();
         }
+
         [HttpPost]
         public async Task<ActionResult> Create(CategoryCreateDTO categoryCreateDto)
         {

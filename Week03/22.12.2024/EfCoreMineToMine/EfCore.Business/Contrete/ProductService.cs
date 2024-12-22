@@ -1,4 +1,5 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using EfCore.Business.Abstract;
 using EfCore.Data.Abstract;
@@ -54,7 +55,7 @@ public class ProductService : IProductService
 
     public async Task<ProductDTO> GetByIdAsync(int id)
     {
-        var product = await _productRepository.GetByIdAsync(id);
+        var product = await _productRepository.GetProductWithCategoriesAsync(id);
 
         var productDto = new ProductDTO
         {
@@ -76,7 +77,7 @@ public class ProductService : IProductService
 
     public async Task<IEnumerable<ProductDTO>> GetProductsAsync()
     {
-         var products = await _productRepository.GetAllAsync();
+         var products = await _productRepository.GetProductsWithCategoriesAsync();
            var productDtos= products
             .Select(x=> new ProductDTO
             {
@@ -85,8 +86,14 @@ public class ProductService : IProductService
                 Price=x.Price,
                 Properties=x.Properties,
                 IsDeleted=x.IsDeleted,
-                
-            }).ToList();
+                Categories = x.ProductCategories
+            .Select(x => new CategoryDTO
+            {
+                Id = x.CategoryId,
+                Name = x.Category.Description,
+                Description = x.Category.Description
+            }).ToList()
+    }).ToList();
             return productDtos;
            
     }
@@ -102,8 +109,15 @@ public class ProductService : IProductService
              Price = x.Price,
              Properties = x.Properties,
              IsDeleted = x.IsDeleted,
-
-         }).ToList();
+             Categories = x.ProductCategories
+            .Select(x => new CategoryDTO
+            {
+                Id = x.CategoryId,
+                Name = x.Category.Description,
+                Description = x.Category.Description
+            }).ToList()
+            }).
+    ToList();
         return productDtos;
     }
 
@@ -123,8 +137,35 @@ public class ProductService : IProductService
         return productDtos;
     }
 
-    public Task<ProductDTO> UpdateAsync(ProductUpdateDTO productUpdateDTO)
+    public async Task<ProductDTO> UpdateAsync(ProductUpdateDTO productUpdateDTO)
     {
-        throw new NotImplementedException();
+        var product = await _productRepository.GetProductWithCategoriesAsync(productUpdateDTO.Id);
+        product.ProductCategories.Clear();
+         await _productRepository.UpdateAsync(product);
+        product.Name = productUpdateDTO.Name;
+        product.Properties = productUpdateDTO.Properties;
+        product.Price = productUpdateDTO.Price;
+        product.ProductCategories = productUpdateDTO.CategoryIds.Select(x=> new ProductCategory{
+                ProductId=product.Id,
+                CategoryId=x
+         }).ToList();
+        await _productRepository.UpdateAsync(product);
+        var productDto = new ProductDTO
+        {
+            Id=product.Id,
+            Name=product.Name,
+            Properties=product.Properties,
+            Price=product.Price,
+            IsDeleted=product.IsDeleted,
+
+            Categories=product.ProductCategories.Select(x=> new CategoryDTO{
+                Id=x.CategoryId,
+                Name=x.Category.Description,
+                Description=x.Category.Description
+
+            }).ToList() 
+        };
+        return productDto;
     }
+    
 }

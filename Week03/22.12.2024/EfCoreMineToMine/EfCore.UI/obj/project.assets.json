@@ -1533,7 +1533,10 @@
         },
         "runtime": {
           "bin/placeholder/EfCore.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

@@ -40,7 +40,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
         return product;
     }
 
-    public async Task<IEnumerable<Product>> GetProductWithCategoriesAsync()
+    public async Task<IEnumerable<Product>> GetProductsWithCategoriesAsync()
     {
         var products = await _appDbContext.Products
         .Include(x => x.ProductCategories)

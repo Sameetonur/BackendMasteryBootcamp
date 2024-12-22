@@ -17,6 +17,6 @@ public interface IProductRepository :IGenericRepository<Product>
     Task<IEnumerable<Product>> GetAllDeleteProductsAsync(bool isDeleted = true);
 
     Task<Product> GetProductWithCategoriesAsync(int id);
-    Task<IEnumerable<Product>> GetProductWithCategoriesAsync();
+    Task<IEnumerable<Product>> GetProductsWithCategoriesAsync();
 
 }

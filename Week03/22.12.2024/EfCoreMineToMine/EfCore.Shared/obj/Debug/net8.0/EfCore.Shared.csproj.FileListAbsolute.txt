@@ -34,3 +34,15 @@ D:\GitHubb\BackendMasteryBootcamp\Week03\21.12.2024\EfCoreMineToMine\EfCore.Shar
 D:\GitHubb\BackendMasteryBootcamp\Week03\21.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\refint\EfCore.Shared.dll
 D:\GitHubb\BackendMasteryBootcamp\Week03\21.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.pdb
 D:\GitHubb\BackendMasteryBootcamp\Week03\21.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\ref\EfCore.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\bin\Debug\net8.0\EfCore.Shared.deps.json
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\bin\Debug\net8.0\EfCore.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\bin\Debug\net8.0\EfCore.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\refint\EfCore.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\EfCore.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\Week03\22.12.2024\EfCoreMineToMine\EfCore.Shared\obj\Debug\net8.0\ref\EfCore.Shared.dll
