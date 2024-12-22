@@ -37,15 +37,16 @@ namespace EfCore.UI.Controllers
             }).ToList();
             return categoryList;
         }
-
+        [http]
         public async Task<ActionResult> Create()
         {
             ProductCreateDTO productCreateDto = new(){
                     CategoryList= await GetCategoryListAsync()
             };
-            return View();
+            return View(productCreateDto);
         }
 
+           [HttpPost] 
         public async Task<ActionResult> Create(ProductCreateDTO productCreateDto)
         {
             if(ModelState.IsValid)

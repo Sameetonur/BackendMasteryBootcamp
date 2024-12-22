@@ -25,7 +25,7 @@
         {
             <div >
                 <input type="Checkbox" name="CategoryIds " value="@category.Id"
-                 @(Model.CategoryIds.Any(x => x==category.Id) ? "checked" : "")/>
+                     @(Model.CategoryIds.Any(x => x==category.Id) ? "checked" : "")/>
                 <label>@category.Name</label>
             </div>
         }
