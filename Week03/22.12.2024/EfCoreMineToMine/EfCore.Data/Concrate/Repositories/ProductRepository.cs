@@ -36,7 +36,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
                         .Where(x => x.Id == id)
                         .Include(x => x.ProductCategories)
                         .ThenInclude(y => y.Category)
-                        .FirstOrDefaultAsync();
+                        .FirstOrDefaultAsync(); //FirstOrDefaultAsync() => tek bir kayıt döner. 
         return product;
     }
 

@@ -23,7 +23,7 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ProductCategory>()
-            .HasKey(x=> new {x.ProductId,x.CategoryId});
+            .HasKey(x=> new {x.ProductId,x.CategoryId}); // Composite Key
 
         base.OnModelCreating(modelBuilder);
     }

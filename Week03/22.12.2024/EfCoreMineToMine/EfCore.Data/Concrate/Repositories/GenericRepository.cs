@@ -45,7 +45,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
     public async Task<TEntity> GetByIdAsync(int id)
     {
-         var entities = await _dbset.FindAsync(id);
+         var entities = await _dbset.FindAsync(id); // id ye göre arama yapar.
          return  entities;
     }
 

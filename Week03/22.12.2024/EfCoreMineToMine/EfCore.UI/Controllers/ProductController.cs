@@ -37,7 +37,7 @@ namespace EfCore.UI.Controllers
             }).ToList();
             return categoryList;
         }
-        [http]
+        [HttpGet]
         public async Task<ActionResult> Create()
         {
             ProductCreateDTO productCreateDto = new(){
