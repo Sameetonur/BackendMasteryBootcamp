@@ -50,7 +50,5 @@ namespace EfCore.UI.Controllers
             }
             return View(categoryCreateDto);
         }
-
-
     }
 }
