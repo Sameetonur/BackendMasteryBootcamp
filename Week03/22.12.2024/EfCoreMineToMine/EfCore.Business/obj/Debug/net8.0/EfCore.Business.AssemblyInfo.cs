@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EfCore.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+254cc25612ece11fa8f471cfc0ef51ffd6398099")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02da1399eb6c8090ac0cb17044d53116389a24ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("EfCore.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EfCore.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

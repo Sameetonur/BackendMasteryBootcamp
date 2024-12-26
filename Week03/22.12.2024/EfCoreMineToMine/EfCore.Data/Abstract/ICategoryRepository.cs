@@ -12,7 +12,4 @@ public interface ICategoryRepository : IGenericRepository<Category>
     // Task DeleteAsync(Category entity);
     //IGenericRepository'den Category için miras alarak, bu interface içinde yukarıdaki metotların imzalarının olmasını sağladık.(TEntity yerine Category yazdık)
     Task<IEnumerable<Category>> GetAllDeletedCategoriesAsync(bool isDeleted=true);
-    
-
-    
 }

@@ -11,7 +11,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 {
 
     protected readonly AppDbContext _appDbContext; // prodectede dışarıya açık ama sadece miras alanlar kullanabilir.
-    private readonly DbSet<TEntity> _dbset;
+    private readonly DbSet<TEntity> _dbset; //  
 
     public GenericRepository(AppDbContext appDbContext)
     {

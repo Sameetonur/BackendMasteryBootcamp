@@ -23,7 +23,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
 
     public async Task<IEnumerable<Product>> GetProductsByCategoryAsync(int categoryId)
     {
-        var products = await _appDbContext.Products.Include(x=>x.ProductCategories).ThenInclude(y=>y.Category)
+        var products = await _appDbContext.Products.Include(x=>x.ProductCategories).ThenInclude (y=>y.Category)
                             .Where(x=>x.ProductCategories.Any(y=>y.CategoryId==categoryId)).ToListAsync();
 
         return products;
