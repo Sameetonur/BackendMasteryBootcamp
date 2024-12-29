@@ -1,0 +1,92 @@
+@model Product
+@{
+    ViewData["Title"] = "AddProduct";
+}
+<h1>Ürün Ekle</h1>
+<div class="container">
+    <form id="addProductForm">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input class="form-control" asp-for="Title" />
+
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input class="form-control" asp-for="Description" />
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fiyat</label>
+            <input class="form-control" asp-for="Price" />
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+           <select class="form-control" asp-for=Category>
+            @foreach( var categories in ViewBag.Categories)
+            {
+                    <option value="@categories">@categories</option>
+            }
+           </select>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+    <hr>
+    <h2>Eklenen Ürünler(Sayfa yenilenince kaybolur!)</h2>
+    <table class="table table-bordered" id="ProductsTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <Tbody>
+            @*BURAYA O SIRADA EKLENEN ÜRÜNLER JS KODU İLE GELECEK*@
+        </Tbody>
+
+    </table>
+
+</div>
+@section Scripts{
+<script>
+    $('#addProductForm').submit(function(event){
+        event.preventDefault();
+
+        let formData ={
+
+            Title:$('#Title').val(),
+            Description:$('#Description').val(),
+            Price:$('#Price').val(),
+            Category:$('#Category').val(),
+             Image : "SamplePicture.png"
+        };
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("AddProduct","Home")',
+            data: formData,
+            success: function(addedproduct)
+            {
+                let newRow=`
+                    <tr>
+                    <td>${addedproduct.id}</td>
+                    <td>${addedproduct.title}</td>
+                    <td>${addedproduct.price}</td>
+                    <td>${addedproduct.category}</td>
+                    </tr>
+                `;
+                $('#ProductsTable tBody').append(newRow);
+                $('#addProductForm').reset();
+            },
+            error:function()
+            {
+                alert('bir hata oluştu');
+            }
+        });
+    });
+    
+</script>
+}

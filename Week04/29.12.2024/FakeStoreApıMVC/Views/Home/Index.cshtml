@@ -1,0 +1,27 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Ürünler</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var Product in Model)
+        {
+            <div class="col-md-3 mb-4">
+                @*asp-controller="Home" asp-action="Detail" asp-route-id="@Product.id"*@
+                <div class="card">
+                    <a href="@Url.Action("Details","Home",new{id=Product.Id})">
+                        <img src="@Product.Image" class="card-img-top" style="height: 200px; object-fit: cover;" />
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"> @Product.Title</h5>
+                        <p class="card-text">@Product.Description.Substring(0, Math.Min(100, Product.Description.Length))</p>
+                        <p class="card-text">@Product.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
