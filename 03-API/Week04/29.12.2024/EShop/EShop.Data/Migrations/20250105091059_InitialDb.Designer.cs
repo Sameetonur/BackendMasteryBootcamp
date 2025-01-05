@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EShop.Data.Migrations
 {
     [DbContext(typeof(EShopDbContext))]
-    [Migration("20250104111450_InitialDb")]
+    [Migration("20250105091059_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
@@ -54,6 +54,22 @@ namespace EShop.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "aee93803-cc4e-4214-a5c4-39aa6262d8d9",
+                            Description = "Yönetici rolü",
+                            Name = "admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "91d8a274-5d3d-46d6-b45e-bf8e2fc57315",
+                            Description = "Normal Kullanıcı rolü",
+                            Name = "user",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("EShop.Entity.Concrete.ApplicationUser", b =>
@@ -139,6 +155,140 @@ namespace EShop.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "a8ef0d00-9e4f-4b83-a6ae-0e9e20d23b2c",
+                            AccessFailedCount = 0,
+                            Address = "Ataşehir",
+                            City = "İstanbul",
+                            ConcurrencyStamp = "354bacb2-0dd1-4fd8-b038-fe57b7f87bf4",
+                            DateofBirth = new DateTime(1995, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "adminuser@gmail.com",
+                            EmailConfirmed = true,
+                            FirstName = "Ali",
+                            Gender = 3,
+                            LastName = "Cabbar",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMINUSER@GMAİL.COM",
+                            NormalizedUserName = "ADMINUSER@GMAİL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHO4RFj0K8JbqfxQ/HDLXiH0F1/8x9QUBd9ctOoJ3dt5/1gwNQzMCYG2ypYK6wOe8A==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "2b40df94-9a53-4b87-9edd-ba147dc1d3ff",
+                            TwoFactorEnabled = false,
+                            UserName = "adminuser@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "d488e437-44a3-4d9e-8e94-30b9e2562068",
+                            AccessFailedCount = 0,
+                            Address = "Kadıköy",
+                            City = "İstanbul",
+                            ConcurrencyStamp = "7159cfae-86b1-4740-8f2d-489f3c8bae47",
+                            DateofBirth = new DateTime(1995, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "normalnuser@gmail.com",
+                            EmailConfirmed = true,
+                            FirstName = "Esin",
+                            Gender = 2,
+                            LastName = "Çelik",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "NORMALUSER@GMAİL.COM",
+                            NormalizedUserName = "NORMALUSER@GMAİL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFL0n7jHn4025bDIyFuHODiej2rOmG/8CZIJIHlfprcQ01NstYRLfps8de4zmLB7uA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "274e9bfd-99aa-4126-b991-bcece5e33097",
+                            TwoFactorEnabled = false,
+                            UserName = "normalnuser@gmail.com"
+                        });
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("Carts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ApplicationUserId = "d488e437-44a3-4d9e-8e94-30b9e2562068",
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 950, DateTimeKind.Utc).AddTicks(6515),
+                            IsActive = true,
+                            IsDeleted = false,
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 950, DateTimeKind.Utc).AddTicks(6520)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ApplicationUserId = "a8ef0d00-9e4f-4b83-a6ae-0e9e20d23b2c",
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 950, DateTimeKind.Utc).AddTicks(6522),
+                            IsActive = true,
+                            IsDeleted = false,
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 950, DateTimeKind.Utc).AddTicks(6523)
+                        });
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartItems");
                 });
 
             modelBuilder.Entity("EShop.Entity.Concrete.Category", b =>
@@ -182,113 +332,193 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1699),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3078),
                             Description = "Bilgisayarlar, telefonlar ve diğer elektronik ürünler.",
                             ImageUrl = "/images/categories/elektronik.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Elektronik",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1706)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3081)
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1710),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3084),
                             Description = "Kadın, erkek ve çocuk giyim ürünleri.",
                             ImageUrl = "/images/categories/moda.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Moda",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1710)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3085)
                         },
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1712),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3086),
                             Description = "Ev dekorasyonu ve yaşam alanları için ürünler.",
                             ImageUrl = "/images/categories/ev-ve-yasam.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Ev & Yaşam",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1712)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3086)
                         },
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1713),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3088),
                             Description = "Outdoor ve spor yaparken kullanabileceğiniz ekipmanlar.",
                             ImageUrl = "/images/categories/spor-outdoor.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Spor & Outdoor",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1713)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3088)
                         },
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1714),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3089),
                             Description = "Araba aksesuarları ve yedek parçalar.",
                             ImageUrl = "/images/categories/otomotiv.jpg",
                             IsActive = false,
                             IsDeleted = false,
                             Name = "Otomotiv",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1715)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3090)
                         },
                         new
                         {
                             Id = 6,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1716),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3091),
                             Description = "Farklı kategorilerde kitaplar.",
                             ImageUrl = "/images/categories/kitaplar.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Kitaplar",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1716)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3091)
                         },
                         new
                         {
                             Id = 7,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1717),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3092),
                             Description = "Sağlık ve güzellik ürünleri.",
                             ImageUrl = "/images/categories/saglik-kozmetik.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Sağlık & Kozmetik",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1718)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3093)
                         },
                         new
                         {
                             Id = 8,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1719),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3094),
                             Description = "Yiyecek ve içecek ürünleri.",
                             ImageUrl = "/images/categories/gida.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Gıda",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1719)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3094)
                         },
                         new
                         {
                             Id = 9,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1720),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3095),
                             Description = "Hobi, oyun ve eğlence ürünleri.",
                             ImageUrl = "/images/categories/hobi-eglence.jpg",
                             IsActive = false,
                             IsDeleted = false,
                             Name = "Hobi & Eğlence",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1720)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3095)
                         },
                         new
                         {
                             Id = 10,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1722),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3097),
                             Description = "Buzdolapları, çamaşır makineleri ve diğer büyük ev aletleri.",
                             ImageUrl = "/images/categories/beyaz-esya.jpg",
                             IsActive = true,
                             IsDeleted = true,
                             Name = "Beyaz Eşya",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(1722)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3097)
                         });
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("OrderStatus")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("EShop.Entity.Concrete.Product", b =>
@@ -335,1202 +565,1202 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2493),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3754),
                             ImageUrl = "/images/products/laptop.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Laptop",
                             Price = 1500.00m,
                             Properties = "16GB RAM, 512GB SSD",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2493)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3755)
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2497),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3759),
                             ImageUrl = "/images/products/smartphone.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Smartphone",
                             Price = 800.00m,
                             Properties = "128GB Storage, 6GB RAM",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2498)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3759)
                         },
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2499),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3761),
                             ImageUrl = "/images/products/tshirt.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "T-Shirt",
                             Price = 20.00m,
                             Properties = "100% Cotton, Size M",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2499)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3761)
                         },
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2501),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3762),
                             ImageUrl = "/images/products/running_shoes.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Running Shoes",
                             Price = 60.00m,
                             Properties = "Size 42, Black",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2501)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3762)
                         },
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2502),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3763),
                             ImageUrl = "/images/products/refrigerator.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Refrigerator",
                             Price = 500.00m,
                             Properties = "300L, Energy Class A++",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2503)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3764)
                         },
                         new
                         {
                             Id = 6,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2504),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3765),
                             ImageUrl = "/images/products/novel_book.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Novel Book",
                             Price = 15.00m,
                             Properties = "Fiction, 300 pages",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2504)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3765)
                         },
                         new
                         {
                             Id = 7,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2505),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3767),
                             ImageUrl = "/images/products/face_cream.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Face Cream",
                             Price = 25.00m,
                             Properties = "50ml, Anti-aging",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2505)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3767)
                         },
                         new
                         {
                             Id = 8,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2507),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3769),
                             ImageUrl = "/images/products/organic_apple.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Organic Apple",
                             Price = 3.00m,
                             Properties = "1kg, Fresh",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2507)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3769)
                         },
                         new
                         {
                             Id = 9,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2510),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3770),
                             ImageUrl = "/images/products/guitar.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Guitar",
                             Price = 120.00m,
                             Properties = "Acoustic, 6 strings",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2510)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3770)
                         },
                         new
                         {
                             Id = 10,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2511),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3771),
                             ImageUrl = "/images/products/car_tire.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Car Tire",
                             Price = 70.00m,
                             Properties = "195/65 R15",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2512)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3772)
                         },
                         new
                         {
                             Id = 11,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2513),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3773),
                             ImageUrl = "/images/products/smartwatch.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Smartwatch",
                             Price = 200.00m,
                             Properties = "Heart Rate Monitor, GPS",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2513)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3773)
                         },
                         new
                         {
                             Id = 12,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2514),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3774),
                             ImageUrl = "/images/products/tablet.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Tablet",
                             Price = 300.00m,
                             Properties = "10.1 inch, 64GB",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2514)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3775)
                         },
                         new
                         {
                             Id = 13,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2515),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3776),
                             ImageUrl = "/images/products/headphones.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Headphones",
                             Price = 150.00m,
                             Properties = "Noise Cancelling",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2516)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3776)
                         },
                         new
                         {
                             Id = 14,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2517),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3777),
                             ImageUrl = "/images/products/blender.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Blender",
                             Price = 50.00m,
                             Properties = "500W, 1.5L",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2517)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3777)
                         },
                         new
                         {
                             Id = 15,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2518),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3779),
                             ImageUrl = "/images/products/microwave.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Microwave",
                             Price = 100.00m,
                             Properties = "800W, 20L",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2519)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3779)
                         },
                         new
                         {
                             Id = 16,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2520),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3781),
                             ImageUrl = "/images/products/camera.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Camera",
                             Price = 700.00m,
                             Properties = "24MP, 4K Video",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2520)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3782)
                         },
                         new
                         {
                             Id = 17,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2521),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3784),
                             ImageUrl = "/images/products/watch.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Watch",
                             Price = 80.00m,
                             Properties = "Analog, Water Resistant",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2521)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3784)
                         },
                         new
                         {
                             Id = 18,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2522),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3785),
                             ImageUrl = "/images/products/backpack.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Backpack",
                             Price = 40.00m,
                             Properties = "30L, Waterproof",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2523)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3785)
                         },
                         new
                         {
                             Id = 19,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2524),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3787),
                             ImageUrl = "/images/products/desk_lamp.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Desk Lamp",
                             Price = 25.00m,
                             Properties = "LED, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2524)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3787)
                         },
                         new
                         {
                             Id = 20,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2525),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3789),
                             ImageUrl = "/images/products/electric_kettle.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Kettle",
                             Price = 30.00m,
                             Properties = "1.7L, 2200W",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2525)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3789)
                         },
                         new
                         {
                             Id = 21,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2527),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3791),
                             ImageUrl = "/images/products/gaming_chair.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Gaming Chair",
                             Price = 200.00m,
                             Properties = "Ergonomic, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2527)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3791)
                         },
                         new
                         {
                             Id = 22,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2528),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3794),
                             ImageUrl = "/images/products/sunglasses.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Sunglasses",
                             Price = 50.00m,
                             Properties = "UV Protection",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2528)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3794)
                         },
                         new
                         {
                             Id = 23,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2529),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3796),
                             ImageUrl = "/images/products/sneakers.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Sneakers",
                             Price = 70.00m,
                             Properties = "Size 43, White",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2530)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3796)
                         },
                         new
                         {
                             Id = 24,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2531),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3798),
                             ImageUrl = "/images/products/coffee_maker.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Coffee Maker",
                             Price = 80.00m,
                             Properties = "12 Cups, Programmable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2531)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3799)
                         },
                         new
                         {
                             Id = 25,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2533),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3800),
                             ImageUrl = "/images/products/vacuum_cleaner.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Vacuum Cleaner",
                             Price = 150.00m,
                             Properties = "Bagless, 2000W",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2533)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3800)
                         },
                         new
                         {
                             Id = 26,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2534),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3802),
                             ImageUrl = "/images/products/air_conditioner.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Air Conditioner",
                             Price = 600.00m,
                             Properties = "12000 BTU, Inverter",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2534)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3802)
                         },
                         new
                         {
                             Id = 27,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2535),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3805),
                             ImageUrl = "/images/products/electric_toothbrush.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Toothbrush",
                             Price = 40.00m,
                             Properties = "Rechargeable, 3 Modes",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2536)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3805)
                         },
                         new
                         {
                             Id = 28,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2537),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3806),
                             ImageUrl = "/images/products/hair_dryer.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Hair Dryer",
                             Price = 30.00m,
                             Properties = "2000W, Ionic",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2537)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3806)
                         },
                         new
                         {
                             Id = 29,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2538),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3807),
                             ImageUrl = "/images/products/smart_tv.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Smart TV",
                             Price = 700.00m,
                             Properties = "55 inch, 4K UHD",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2538)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3808)
                         },
                         new
                         {
                             Id = 30,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2540),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3809),
                             ImageUrl = "/images/products/gaming_console.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Gaming Console",
                             Price = 500.00m,
                             Properties = "1TB, 4K HDR",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2540)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3809)
                         },
                         new
                         {
                             Id = 31,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2542),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3811),
                             ImageUrl = "/images/products/wireless_mouse.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Wireless Mouse",
                             Price = 25.00m,
                             Properties = "Ergonomic, 1600 DPI",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2542)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3811)
                         },
                         new
                         {
                             Id = 32,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2543),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3812),
                             ImageUrl = "/images/products/keyboard.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Keyboard",
                             Price = 80.00m,
                             Properties = "Mechanical, RGB",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2543)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3812)
                         },
                         new
                         {
                             Id = 33,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2544),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3814),
                             ImageUrl = "/images/products/monitor.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Monitor",
                             Price = 300.00m,
                             Properties = "27 inch, 144Hz",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2544)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3814)
                         },
                         new
                         {
                             Id = 34,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2546),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3816),
                             ImageUrl = "/images/products/printer.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Printer",
                             Price = 150.00m,
                             Properties = "All-in-One, Wireless",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2546)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3816)
                         },
                         new
                         {
                             Id = 35,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2547),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3817),
                             ImageUrl = "/images/products/router.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Router",
                             Price = 100.00m,
                             Properties = "Dual Band, Gigabit",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2547)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3817)
                         },
                         new
                         {
                             Id = 36,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2548),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3818),
                             ImageUrl = "/images/products/external_hard_drive.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "External Hard Drive",
                             Price = 80.00m,
                             Properties = "2TB, USB 3.0",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2549)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3819)
                         },
                         new
                         {
                             Id = 37,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2586),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3820),
                             ImageUrl = "/images/products/flash_drive.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Flash Drive",
                             Price = 20.00m,
                             Properties = "64GB, USB 3.0",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2586)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3820)
                         },
                         new
                         {
                             Id = 38,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2589),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3821),
                             ImageUrl = "/images/products/power_bank.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Power Bank",
                             Price = 30.00m,
                             Properties = "10000mAh, Fast Charging",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2589)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3821)
                         },
                         new
                         {
                             Id = 39,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2590),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3823),
                             ImageUrl = "/images/products/wireless_charger.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Wireless Charger",
                             Price = 25.00m,
                             Properties = "10W, Fast Charging",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2591)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3823)
                         },
                         new
                         {
                             Id = 40,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2592),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3824),
                             ImageUrl = "/images/products/smart_light_bulb.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Smart Light Bulb",
                             Price = 20.00m,
                             Properties = "RGB, WiFi",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2592)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3824)
                         },
                         new
                         {
                             Id = 41,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2594),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3826),
                             ImageUrl = "/images/products/security_camera.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Security Camera",
                             Price = 60.00m,
                             Properties = "1080p, Night Vision",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2594)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3826)
                         },
                         new
                         {
                             Id = 42,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2595),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3827),
                             ImageUrl = "/images/products/fitness_tracker.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Fitness Tracker",
                             Price = 50.00m,
                             Properties = "Heart Rate Monitor, GPS",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2596)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3828)
                         },
                         new
                         {
                             Id = 43,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2597),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3829),
                             ImageUrl = "/images/products/electric_scooter.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Scooter",
                             Price = 400.00m,
                             Properties = "25km/h, 30km Range",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2597)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3829)
                         },
                         new
                         {
                             Id = 44,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2598),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3830),
                             ImageUrl = "/images/products/drone.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Drone",
                             Price = 500.00m,
                             Properties = "4K Camera, GPS",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2598)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3831)
                         },
                         new
                         {
                             Id = 45,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2599),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3832),
                             ImageUrl = "/images/products/action_camera.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Action Camera",
                             Price = 150.00m,
                             Properties = "4K, Waterproof",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2600)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3832)
                         },
                         new
                         {
                             Id = 46,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2601),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3833),
                             ImageUrl = "/images/products/electric_shaver.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Shaver",
                             Price = 60.00m,
                             Properties = "Rechargeable, Wet & Dry",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2601)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3833)
                         },
                         new
                         {
                             Id = 47,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2602),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3866),
                             ImageUrl = "/images/products/hair_straightener.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Hair Straightener",
                             Price = 40.00m,
                             Properties = "Ceramic, 200°C",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2602)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3866)
                         },
                         new
                         {
                             Id = 48,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2604),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3867),
                             ImageUrl = "/images/products/electric_grill.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Grill",
                             Price = 70.00m,
                             Properties = "2000W, Non-Stick",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2604)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3868)
                         },
                         new
                         {
                             Id = 49,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2605),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3869),
                             ImageUrl = "/images/products/rice_cooker.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Rice Cooker",
                             Price = 50.00m,
                             Properties = "1.8L, Non-Stick",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2606)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3869)
                         },
                         new
                         {
                             Id = 50,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2607),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3870),
                             ImageUrl = "/images/products/air_fryer.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Air Fryer",
                             Price = 100.00m,
                             Properties = "3.5L, Digital",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2607)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3871)
                         },
                         new
                         {
                             Id = 51,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2608),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3873),
                             ImageUrl = "/images/products/electric_blanket.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Blanket",
                             Price = 40.00m,
                             Properties = "150x200cm, 3 Heat Settings",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2608)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3873)
                         },
                         new
                         {
                             Id = 52,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2609),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3874),
                             ImageUrl = "/images/products/water_filter.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Water Filter",
                             Price = 30.00m,
                             Properties = "10L, 5-Stage",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2609)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3874)
                         },
                         new
                         {
                             Id = 53,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2611),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3876),
                             ImageUrl = "/images/products/electric_heater.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Heater",
                             Price = 50.00m,
                             Properties = "2000W, Adjustable Thermostat",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2611)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3876)
                         },
                         new
                         {
                             Id = 54,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2612),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3877),
                             ImageUrl = "/images/products/dehumidifier.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Dehumidifier",
                             Price = 150.00m,
                             Properties = "20L, Digital",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2612)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3877)
                         },
                         new
                         {
                             Id = 55,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2613),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3878),
                             ImageUrl = "/images/products/humidifier.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Humidifier",
                             Price = 40.00m,
                             Properties = "5L, Ultrasonic",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2614)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3879)
                         },
                         new
                         {
                             Id = 56,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2615),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3880),
                             ImageUrl = "/images/products/electric_fan.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Fan",
                             Price = 30.00m,
                             Properties = "16 inch, Oscillating",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2615)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3880)
                         },
                         new
                         {
                             Id = 57,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2617),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3881),
                             ImageUrl = "/images/products/electric_iron.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Iron",
                             Price = 40.00m,
                             Properties = "2400W, Steam",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2617)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3881)
                         },
                         new
                         {
                             Id = 58,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2618),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3883),
                             ImageUrl = "/images/products/sewing_machine.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Sewing Machine",
                             Price = 100.00m,
                             Properties = "Portable, 12 Stitches",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2619)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3883)
                         },
                         new
                         {
                             Id = 59,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2620),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3884),
                             ImageUrl = "/images/products/electric_screwdriver.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Electric Screwdriver",
                             Price = 30.00m,
                             Properties = "Rechargeable, 3.6V",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2620)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3884)
                         },
                         new
                         {
                             Id = 60,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2621),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3885),
                             ImageUrl = "/images/products/cordless_drill.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Cordless Drill",
                             Price = 80.00m,
                             Properties = "18V, 2 Batteries",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2621)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3885)
                         },
                         new
                         {
                             Id = 61,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2622),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3888),
                             ImageUrl = "/images/products/tool_set.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Tool Set",
                             Price = 50.00m,
                             Properties = "100 Pieces, Chrome Vanadium",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2623)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3888)
                         },
                         new
                         {
                             Id = 62,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2624),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3889),
                             ImageUrl = "/images/products/lawn_mower.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Lawn Mower",
                             Price = 150.00m,
                             Properties = "Electric, 1600W",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2624)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3889)
                         },
                         new
                         {
                             Id = 63,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2625),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3891),
                             ImageUrl = "/images/products/garden_hose.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Garden Hose",
                             Price = 40.00m,
                             Properties = "30m, Expandable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2625)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3891)
                         },
                         new
                         {
                             Id = 64,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2626),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3892),
                             ImageUrl = "/images/products/bbq_grill.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "BBQ Grill",
                             Price = 70.00m,
                             Properties = "Charcoal, Portable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2627)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3892)
                         },
                         new
                         {
                             Id = 65,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2628),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3893),
                             ImageUrl = "/images/products/tent.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Tent",
                             Price = 100.00m,
                             Properties = "4 Person, Waterproof",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2628)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3894)
                         },
                         new
                         {
                             Id = 66,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2629),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3895),
                             ImageUrl = "/images/products/sleeping_bag.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Sleeping Bag",
                             Price = 50.00m,
                             Properties = "3 Season, Mummy",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2629)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3895)
                         },
                         new
                         {
                             Id = 67,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2630),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3897),
                             ImageUrl = "/images/products/camping_stove.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Camping Stove",
                             Price = 30.00m,
                             Properties = "Portable, Gas",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2631)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3897)
                         },
                         new
                         {
                             Id = 68,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2632),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3898),
                             ImageUrl = "/images/products/hiking_backpack.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Hiking Backpack",
                             Price = 60.00m,
                             Properties = "50L, Waterproof",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2632)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3899)
                         },
                         new
                         {
                             Id = 69,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2633),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3900),
                             ImageUrl = "/images/products/binoculars.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Binoculars",
                             Price = 80.00m,
                             Properties = "10x50, Waterproof",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2633)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3900)
                         },
                         new
                         {
                             Id = 70,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2635),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3901),
                             ImageUrl = "/images/products/fishing_rod.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Fishing Rod",
                             Price = 40.00m,
                             Properties = "Carbon Fiber, 2.1m",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2635)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3901)
                         },
                         new
                         {
                             Id = 71,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2636),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3902),
                             ImageUrl = "/images/products/yoga_mat.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Yoga Mat",
                             Price = 20.00m,
                             Properties = "6mm, Non-Slip",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2636)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3903)
                         },
                         new
                         {
                             Id = 72,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2637),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3904),
                             ImageUrl = "/images/products/dumbbell_set.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Dumbbell Set",
                             Price = 50.00m,
                             Properties = "20kg, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2638)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3904)
                         },
                         new
                         {
                             Id = 73,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2640),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3905),
                             ImageUrl = "/images/products/treadmill.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Treadmill",
                             Price = 500.00m,
                             Properties = "Folding, 2.5HP",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2640)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3905)
                         },
                         new
                         {
                             Id = 74,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2643),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3906),
                             ImageUrl = "/images/products/exercise_bike.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Exercise Bike",
                             Price = 200.00m,
                             Properties = "Magnetic, 8 Resistance Levels",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2643)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3907)
                         },
                         new
                         {
                             Id = 75,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2644),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3908),
                             ImageUrl = "/images/products/rowing_machine.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Rowing Machine",
                             Price = 300.00m,
                             Properties = "Magnetic, Foldable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2644)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3908)
                         },
                         new
                         {
                             Id = 76,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2645),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3909),
                             ImageUrl = "/images/products/elliptical_trainer.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Elliptical Trainer",
                             Price = 400.00m,
                             Properties = "Magnetic, 8 Resistance Levels",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2646)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3909)
                         },
                         new
                         {
                             Id = 77,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2647),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3911),
                             ImageUrl = "/images/products/weight_bench.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Weight Bench",
                             Price = 100.00m,
                             Properties = "Adjustable, Foldable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2647)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3911)
                         },
                         new
                         {
                             Id = 78,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2648),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3912),
                             ImageUrl = "/images/products/pull_up_bar.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Pull-Up Bar",
                             Price = 30.00m,
                             Properties = "Doorway, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2648)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3912)
                         },
                         new
                         {
                             Id = 79,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2649),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3913),
                             ImageUrl = "/images/products/resistance_bands.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Resistance Bands",
                             Price = 20.00m,
                             Properties = "Set of 5, Different Resistance Levels",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2650)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3913)
                         },
                         new
                         {
                             Id = 80,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2652),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3915),
                             ImageUrl = "/images/products/jump_rope.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Jump Rope",
                             Price = 10.00m,
                             Properties = "Adjustable, Speed",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2652)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3915)
                         },
                         new
                         {
                             Id = 81,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2653),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3916),
                             ImageUrl = "/images/products/basketball.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Basketball",
                             Price = 25.00m,
                             Properties = "Size 7, Indoor/Outdoor",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2654)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3916)
                         },
                         new
                         {
                             Id = 82,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2655),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3917),
                             ImageUrl = "/images/products/soccer_ball.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Soccer Ball",
                             Price = 20.00m,
                             Properties = "Size 5, Synthetic Leather",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2655)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3918)
                         },
                         new
                         {
                             Id = 83,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2656),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3920),
                             ImageUrl = "/images/products/tennis_racket.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Tennis Racket",
                             Price = 50.00m,
                             Properties = "Graphite, Lightweight",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2656)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3920)
                         },
                         new
                         {
                             Id = 84,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2657),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3921),
                             ImageUrl = "/images/products/badminton_set.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Badminton Set",
                             Price = 30.00m,
                             Properties = "2 Rackets, 3 Shuttlecocks",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2658)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3921)
                         },
                         new
                         {
                             Id = 85,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2659),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3922),
                             ImageUrl = "/images/products/golf_clubs.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Golf Clubs",
                             Price = 500.00m,
                             Properties = "Set of 12, Graphite",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2659)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3922)
                         },
                         new
                         {
                             Id = 86,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2660),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3924),
                             ImageUrl = "/images/products/skateboard.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Skateboard",
                             Price = 40.00m,
                             Properties = "31 inch, Maple",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2660)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3924)
                         },
                         new
                         {
                             Id = 87,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2661),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3925),
                             ImageUrl = "/images/products/roller_skates.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Roller Skates",
                             Price = 60.00m,
                             Properties = "Adjustable, Size 38-42",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2662)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3925)
                         },
                         new
                         {
                             Id = 88,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2663),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3926),
                             ImageUrl = "/images/products/helmet.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Helmet",
                             Price = 30.00m,
                             Properties = "Bike, Size M",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2663)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3927)
                         },
                         new
                         {
                             Id = 89,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2665),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3928),
                             ImageUrl = "/images/products/knee_pads.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Knee Pads",
                             Price = 20.00m,
                             Properties = "Set of 2, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2665)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3928)
                         },
                         new
                         {
                             Id = 90,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2666),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3929),
                             ImageUrl = "/images/products/elbow_pads.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Elbow Pads",
                             Price = 20.00m,
                             Properties = "Set of 2, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2667)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3929)
                         },
                         new
                         {
                             Id = 91,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2699),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3931),
                             ImageUrl = "/images/products/wrist_guards.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Wrist Guards",
                             Price = 20.00m,
                             Properties = "Set of 2, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2699)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3931)
                         },
                         new
                         {
                             Id = 92,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2701),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3932),
                             ImageUrl = "/images/products/bike_lock.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Lock",
                             Price = 25.00m,
                             Properties = "Combination, Heavy Duty",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2701)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3932)
                         },
                         new
                         {
                             Id = 93,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2702),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3933),
                             ImageUrl = "/images/products/bike_pump.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Pump",
                             Price = 20.00m,
                             Properties = "Portable, High Pressure",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2702)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3934)
                         },
                         new
                         {
                             Id = 94,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2703),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3935),
                             ImageUrl = "/images/products/bike_light.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Light",
                             Price = 30.00m,
                             Properties = "Front and Rear, USB Rechargeable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2704)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3935)
                         },
                         new
                         {
                             Id = 95,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2705),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3936),
                             ImageUrl = "/images/products/bike_bell.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Bell",
                             Price = 10.00m,
                             Properties = "Loud, Easy to Install",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2705)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3936)
                         },
                         new
                         {
                             Id = 96,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2706),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3938),
                             ImageUrl = "/images/products/bike_basket.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Basket",
                             Price = 40.00m,
                             Properties = "Front, Wicker",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2706)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3938)
                         },
                         new
                         {
                             Id = 97,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2707),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3939),
                             ImageUrl = "/images/products/bike_rack.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Rack",
                             Price = 50.00m,
                             Properties = "Rear, Adjustable",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2708)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3939)
                         },
                         new
                         {
                             Id = 98,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2709),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3940),
                             ImageUrl = "/images/products/bike_seat.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Seat",
                             Price = 30.00m,
                             Properties = "Comfort, Gel",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2709)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3941)
                         },
                         new
                         {
                             Id = 99,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2710),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3942),
                             ImageUrl = "/images/products/bike_gloves.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Gloves",
                             Price = 20.00m,
                             Properties = "Padded, Size L",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2710)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3942)
                         },
                         new
                         {
                             Id = 100,
-                            CreateDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2711),
+                            CreateDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3943),
                             ImageUrl = "/images/products/bike_shorts.jpg",
                             IsActive = true,
                             IsDeleted = false,
                             Name = "Bike Shorts",
                             Price = 40.00m,
                             Properties = "Padded, Size M",
-                            UpdatedDate = new DateTime(2025, 1, 4, 11, 14, 49, 689, DateTimeKind.Utc).AddTicks(2711)
+                            UpdatedDate = new DateTime(2025, 1, 5, 9, 10, 58, 815, DateTimeKind.Utc).AddTicks(3943)
                         });
                 });
 
@@ -2136,6 +2366,18 @@ namespace EShop.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "a8ef0d00-9e4f-4b83-a6ae-0e9e20d23b2c",
+                            RoleId = "aee93803-cc4e-4214-a5c4-39aa6262d8d9"
+                        },
+                        new
+                        {
+                            UserId = "d488e437-44a3-4d9e-8e94-30b9e2562068",
+                            RoleId = "91d8a274-5d3d-46d6-b45e-bf8e2fc57315"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -2155,6 +2397,62 @@ namespace EShop.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.Cart", b =>
+                {
+                    b.HasOne("EShop.Entity.Concrete.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.CartItem", b =>
+                {
+                    b.HasOne("EShop.Entity.Concrete.Cart", "Cart")
+                        .WithMany("CartItems")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EShop.Entity.Concrete.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.Order", b =>
+                {
+                    b.HasOne("EShop.Entity.Concrete.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.OrderItem", b =>
+                {
+                    b.HasOne("EShop.Entity.Concrete.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EShop.Entity.Concrete.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("EShop.Entity.Concrete.ProductCategory", b =>
@@ -2227,9 +2525,19 @@ namespace EShop.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EShop.Entity.Concrete.Cart", b =>
+                {
+                    b.Navigation("CartItems");
+                });
+
             modelBuilder.Entity("EShop.Entity.Concrete.Category", b =>
                 {
                     b.Navigation("ProductCategories");
+                });
+
+            modelBuilder.Entity("EShop.Entity.Concrete.Order", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("EShop.Entity.Concrete.Product", b =>

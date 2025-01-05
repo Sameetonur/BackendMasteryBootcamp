@@ -17,7 +17,11 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
     }
     public DbSet<Category>? Categories { get; set; }
     public DbSet<Product>? Products { get; set; }
+    public DbSet<Cart>? Carts { get; set; }
+    public DbSet<CartItem>? CartItems { get; set; }
     public DbSet<ProductCategory>? ProductCategories { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderItem>? OrderItems { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -327,6 +331,8 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
             );
         });
 
+        builder.Entity<OrderItem>().Property(x=>x.UnitPrice).HasColumnType("decimal(10,2)");
+
         var hasher = new PasswordHasher<ApplicationUser>();
 
         var adminUser = new ApplicationUser("Ali", "Cabbar", new DateTime(1995, 1, 1), GenderType.Male)
@@ -356,6 +362,41 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
 
         };
         builder.Entity<ApplicationUser>().HasData(adminUser, normalUser);
+
+        #region Carts
+        builder.Entity<Cart>().HasData(
+            new Cart(normalUser.Id) { Id = 1 },
+            new Cart(adminUser.Id) { Id = 2 }
+        );
+        #endregion
+
+        var adminRole = new ApplicationRole("Yönetici rolü")
+        {
+            Id = "aee93803-cc4e-4214-a5c4-39aa6262d8d9",
+            Name = "admin",
+            NormalizedName = "ADMIN",
+        };
+        var userRole = new ApplicationRole("Normal Kullanıcı rolü")
+        {
+            Id = "91d8a274-5d3d-46d6-b45e-bf8e2fc57315",
+            Name = "user",
+            NormalizedName = "USER",
+        };
+        builder.Entity<ApplicationRole>().HasData(adminRole, userRole);
+
+        builder.Entity<IdentityUserRole<string>>().HasData(
+            new IdentityUserRole<string>
+            {
+                RoleId = adminRole.Id,
+                UserId = adminUser.Id
+            },
+            new IdentityUserRole<string>
+            {
+                RoleId = userRole.Id,
+                UserId = normalUser.Id
+            }
+        );
+
         base.OnModelCreating(builder);
     }
 }
