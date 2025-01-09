@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Data\\SametApp.Data.csproj": {}
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Data\\SametApp.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Data\\SametApp.Data.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Data\\SametApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Data\\SametApp.Data.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Data\\SametApp.Data.csproj",
         "projectName": "SametApp.Data",
-        "projectPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Data\\SametApp.Data.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Data\\SametApp.Data.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Data\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Entity\\SametApp.Entity.csproj": {
-                "projectPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Entity\\SametApp.Entity.csproj"
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Entity\\SametApp.Entity.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Entity\\SametApp.Entity.csproj"
               },
-              "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj": {
-                "projectPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj"
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Entity\\SametApp.Entity.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Entity\\SametApp.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Entity\\SametApp.Entity.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Entity\\SametApp.Entity.csproj",
         "projectName": "SametApp.Entity",
-        "projectPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Entity\\SametApp.Entity.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Entity\\SametApp.Entity.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Entity\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +111,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj": {
-                "projectPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj"
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj",
         "projectName": "SametApp.Shared",
-        "projectPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\SametApp.Shared.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\SametApp.Shared.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\Desktop\\SametApp\\SametApp.Shared\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\SametAppDeneme\\SametApp.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

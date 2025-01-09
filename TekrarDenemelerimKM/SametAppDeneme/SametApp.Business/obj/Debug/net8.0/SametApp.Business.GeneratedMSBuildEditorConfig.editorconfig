@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SametApp.Business
-build_property.ProjectDir = C:\Users\samet\Desktop\SametApp\SametApp.Business\
+build_property.ProjectDir = D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\SametAppDeneme\SametApp.Business\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
