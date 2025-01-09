@@ -1,0 +1,12 @@
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\bin\Debug\net8.0\DailyApi.Shared.deps.json
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\bin\Debug\net8.0\DailyApi.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\bin\Debug\net8.0\DailyApi.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\refint\DailyApi.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\DailyApi.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Shared\obj\Debug\net8.0\ref\DailyApi.Shared.dll

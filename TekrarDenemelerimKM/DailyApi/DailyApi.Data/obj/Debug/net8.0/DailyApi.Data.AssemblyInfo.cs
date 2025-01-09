@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DailyApi.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f6748bb82c485a3e64a4798159d35603572e269")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a419d1c2e1aeaa4297ddc25d65257961b853315")]
 [assembly: System.Reflection.AssemblyProductAttribute("DailyApi.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DailyApi.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

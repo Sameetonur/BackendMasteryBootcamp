@@ -1,0 +1,16 @@
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\bin\Debug\net8.0\DailyApi.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\bin\Debug\net8.0\DailyApi.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\bin\Debug\net8.0\DailyApi.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\bin\Debug\net8.0\DailyApi.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\bin\Debug\net8.0\DailyApi.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.F75C3D8E.Up2Date
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\refint\DailyApi.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\DailyApi.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\TekrarDenemelerimKM\DailyApi\DailyApi.Entity\obj\Debug\net8.0\ref\DailyApi.Entity.dll
