@@ -1,0 +1,385 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.API\\DailyApi.API.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.API\\DailyApi.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.API\\DailyApi.API.csproj",
+        "projectName": "DailyApi.API",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.API\\DailyApi.API.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Service\\DailyApi.Service.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Service\\DailyApi.Service.csproj"
+              },
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Data\\DailyApi.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Data\\DailyApi.Data.csproj",
+        "projectName": "DailyApi.Data",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Data\\DailyApi.Data.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Entity\\DailyApi.Entity.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Entity\\DailyApi.Entity.csproj"
+              },
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Entity\\DailyApi.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Entity\\DailyApi.Entity.csproj",
+        "projectName": "DailyApi.Entity",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Entity\\DailyApi.Entity.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Service\\DailyApi.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Service\\DailyApi.Service.csproj",
+        "projectName": "DailyApi.Service",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Service\\DailyApi.Service.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Data\\DailyApi.Data.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Data\\DailyApi.Data.csproj"
+              },
+              "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj",
+        "projectName": "DailyApi.Shared",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\DailyApi.Shared.csproj",
+        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\TekrarDenemelerimKM\\DailyApi\\DailyApi.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

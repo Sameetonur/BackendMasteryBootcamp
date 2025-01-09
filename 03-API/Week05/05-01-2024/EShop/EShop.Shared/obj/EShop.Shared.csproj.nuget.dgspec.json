@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week04\\29.12.2024\\EShop\\EShop.Shared\\EShop.Shared.csproj": {}
+    "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week05\\05-01-2024\\EShop\\EShop.Shared\\EShop.Shared.csproj": {}
   },
   "projects": {
-    "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week04\\29.12.2024\\EShop\\EShop.Shared\\EShop.Shared.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week05\\05-01-2024\\EShop\\EShop.Shared\\EShop.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week04\\29.12.2024\\EShop\\EShop.Shared\\EShop.Shared.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week05\\05-01-2024\\EShop\\EShop.Shared\\EShop.Shared.csproj",
         "projectName": "EShop.Shared",
-        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week04\\29.12.2024\\EShop\\EShop.Shared\\EShop.Shared.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week05\\05-01-2024\\EShop\\EShop.Shared\\EShop.Shared.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week04\\29.12.2024\\EShop\\EShop.Shared\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week05\\05-01-2024\\EShop\\EShop.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
