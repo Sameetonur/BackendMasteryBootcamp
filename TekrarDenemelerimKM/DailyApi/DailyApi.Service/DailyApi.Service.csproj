@@ -11,4 +11,8 @@
     <ProjectReference Include="..\DailyApi.Shared\DailyApi.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+  </ItemGroup>
+
 </Project>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj": {}
+    "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj": {}
   },
   "projects": {
-    "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj",
         "projectName": "EfCore.Data",
-        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\EfCore.Data.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj": {
-                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj"
+              "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj"
               },
-              "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj": {
-                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj"
+              "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj",
         "projectName": "EfCore.Entity",
-        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\EfCore.Entity.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +111,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj": {
-                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj"
+              "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj": {
+                "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj": {
+    "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj",
+        "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj",
         "projectName": "EfCore.Shared",
-        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj",
+        "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\EfCore.Shared.csproj",
         "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\obj\\",
+        "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\02-LINQ ve EF Core\\Week03\\21.12.2024\\EfCoreMineToMine\\EfCore.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
