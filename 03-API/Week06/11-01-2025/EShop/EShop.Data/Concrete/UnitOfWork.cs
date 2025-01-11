@@ -8,6 +8,13 @@ namespace EShop.Data.Concrete;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly EShopDbContext _dbcontext;
+
+    public UnitOfWork(EShopDbContext dbcontext, IServiceProvider serviceProvider)
+    {
+        _dbcontext = dbcontext;
+        _serviceProvider = serviceProvider;
+    }
+
     private readonly IServiceProvider _serviceProvider;
     public void Dispose()
     {

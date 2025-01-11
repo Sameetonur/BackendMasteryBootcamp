@@ -344,10 +344,10 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
             NormalizedEmail = "ADMINUSER@GMAİL.COM",
             EmailConfirmed = true,
             Address = "Ataşehir",
-            City = "İstanbul",
-            PasswordHash = hasher.HashPassword(null, "Qwe123.,")
-
+            City = "İstanbul"
         };
+                adminUser.PasswordHash = hasher.HashPassword(adminUser, "Qwe123.,");
+
         var normalUser = new ApplicationUser("Esin", "Çelik", new DateTime(1995, 1, 1), GenderType.Famele)
         {
             Id = "d488e437-44a3-4d9e-8e94-30b9e2562068",
@@ -357,10 +357,12 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
             NormalizedEmail = "NORMALUSER@GMAİL.COM",
             EmailConfirmed = true,
             Address = "Kadıköy",
-            City = "İstanbul",
-            PasswordHash = hasher.HashPassword(null, "Qwe123.,")
+            City = "İstanbul"
 
         };
+
+            normalUser.PasswordHash = hasher.HashPassword(normalUser, "Qwe123.,");
+
         builder.Entity<ApplicationUser>().HasData(adminUser, normalUser);
 
         #region Carts

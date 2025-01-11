@@ -10,3 +10,8 @@ D:\GitHubb\BackendMasteryBootcamp\03-API\Week04\29.12.2024\EShop\EShop.Shared\ob
 D:\GitHubb\BackendMasteryBootcamp\03-API\Week04\29.12.2024\EShop\EShop.Shared\obj\Debug\net8.0\refint\EShop.Shared.dll
 D:\GitHubb\BackendMasteryBootcamp\03-API\Week04\29.12.2024\EShop\EShop.Shared\obj\Debug\net8.0\EShop.Shared.pdb
 D:\GitHubb\BackendMasteryBootcamp\03-API\Week04\29.12.2024\EShop\EShop.Shared\obj\Debug\net8.0\ref\EShop.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week06\11-01-2025\EShop\EShop.Shared\obj\Debug\net8.0\EShop.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week06\11-01-2025\EShop\EShop.Shared\obj\Debug\net8.0\EShop.Shared.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week06\11-01-2025\EShop\EShop.Shared\obj\Debug\net8.0\EShop.Shared.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week06\11-01-2025\EShop\EShop.Shared\obj\Debug\net8.0\EShop.Shared.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week06\11-01-2025\EShop\EShop.Shared\obj\Debug\net8.0\EShop.Shared.sourcelink.json

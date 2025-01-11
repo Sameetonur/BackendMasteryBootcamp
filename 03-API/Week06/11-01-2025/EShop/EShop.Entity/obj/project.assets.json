@@ -325,7 +325,10 @@
         },
         "runtime": {
           "bin/placeholder/EShop.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
