@@ -27,5 +27,12 @@ namespace EShop.API.Controllers
             var result = await _authService.LoginAsycn(loginDto);
             return StatusCode(result.StatusCode,result);
         }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(RegisterDto registerDto)
+        {
+            var result = await _authService.RegisterAync(registerDto);
+            return StatusCode(result.StatusCode, result);
+        }
     }
 }

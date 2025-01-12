@@ -5,6 +5,7 @@ using System.Text;
 using EShop.Entity.Concrete;
 using EShop.Service.Abstract;
 using EShop.Shared.Configurations.Auth;
+using EShop.Shared.Dtos;
 using EShop.Shared.Dtos.Auth;
 using EShop.Shared.Dtos.ResponseDtos;
 using Microsoft.AspNetCore.Http;
@@ -68,9 +69,62 @@ public class AuthManager :IAuthService
         }
     }
 
-    public Task<ResponseDto<ApplicationUser>> RegisterAync(RegisterDto registerDto)
+    public async Task<ResponseDto<ApplicationUserDto>> RegisterAync(RegisterDto registerDto)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var existingUser = await _userManager.FindByNameAsync(registerDto.UserName);
+            if(existingUser != null)
+            {
+                return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten var",StatusCodes.Status400BadRequest);
+            }
+            var user = new ApplicationUser(
+                firstName: registerDto.FirstName,
+                lastName: registerDto.LastName,
+                dateofBirth: registerDto.DateOfBirth,
+                gender:registerDto.Gender
+            ){
+                UserName = registerDto.UserName,
+                Email =registerDto.Email,
+                EmailConfirmed=true,
+                Address= registerDto.Address,
+                City= registerDto.City
+
+            };
+            var result =await _userManager.CreateAsync(user, registerDto.Password);
+            if(!result.Succeeded)
+            {
+                return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı oluşturulurken bir hata oluştu",StatusCodes.Status400BadRequest);
+            }
+             result = await _userManager.AddToRolesAsync(user, registerDto.Role);
+            {
+                if (!result.Succeeded)
+                {
+                    return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı rolu atanırken  bir hata oluştu", StatusCodes.Status400BadRequest);
+                }
+            }
+
+            var userDto = new ApplicationUserDto
+            {
+                Id= user.Id,
+                FirstName=user.FirstName,
+                LastName=user.LastName,
+                UserName=user.UserName,
+                Gender=user.Gender,
+                Email=user.Email,
+                Address=user.Address,
+                City=user.City
+            };
+            return ResponseDto<ApplicationUserDto>.Success(userDto,StatusCodes.Status201Created);
+                
+
+            
+        }
+        catch (System.Exception ex)
+        {
+            System.Console.WriteLine($"Katıy olurken bir hata oluştu {ex.Message}");
+            throw;
+        }
     }
 
     public Task<ResponseDto<NoContent>> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
