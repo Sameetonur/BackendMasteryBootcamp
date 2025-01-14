@@ -15,10 +15,10 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace EShop.Service.Concrete;
 
-public class AuthManager :IAuthService
+public class AuthManager : IAuthService
 {
     private readonly UserManager<ApplicationUser> _userManager;
-    
+
     private readonly SignInManager<ApplicationUser> _singInManager;
 
     private JwtConfig _jwtConfig;
@@ -47,19 +47,19 @@ public class AuthManager :IAuthService
         try
         {
             var user = await _userManager.FindByNameAsync(loginDto.UserName);
-            if( user == null)
+            if (user == null)
             {
-                return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı",StatusCodes.Status400BadRequest);
+                return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı", StatusCodes.Status400BadRequest);
 
             }
-            var isValidPassword = await _userManager.CheckPasswordAsync(user,loginDto.Password);
-            if(!isValidPassword)
+            var isValidPassword = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+            if (!isValidPassword)
             {
                 return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı", StatusCodes.Status400BadRequest);
             }
             // token yaratmamız gerekiyor. GenerateJwtToken(user).
             var tokenDto = await GenerateJwtToken(user);
-            return ResponseDto<TokenDto>.Success(tokenDto,StatusCodes.Status200OK);
+            return ResponseDto<TokenDto>.Success(tokenDto, StatusCodes.Status200OK);
 
         }
         catch (System.Exception ex)
@@ -74,29 +74,30 @@ public class AuthManager :IAuthService
         try
         {
             var existingUser = await _userManager.FindByNameAsync(registerDto.UserName);
-            if(existingUser != null)
+            if (existingUser != null)
             {
-                return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten var",StatusCodes.Status400BadRequest);
+                return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten var", StatusCodes.Status400BadRequest);
             }
             var user = new ApplicationUser(
                 firstName: registerDto.FirstName,
                 lastName: registerDto.LastName,
                 dateofBirth: registerDto.DateOfBirth,
-                gender:registerDto.Gender
-            ){
+                gender: registerDto.Gender
+            )
+            {
                 UserName = registerDto.UserName,
-                Email =registerDto.Email,
-                EmailConfirmed=true,
-                Address= registerDto.Address,
-                City= registerDto.City
+                Email = registerDto.Email,
+                EmailConfirmed = true,
+                Address = registerDto.Address,
+                City = registerDto.City
 
             };
-            var result =await _userManager.CreateAsync(user, registerDto.Password);
-            if(!result.Succeeded)
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+            if (!result.Succeeded)
             {
-                return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı oluşturulurken bir hata oluştu",StatusCodes.Status400BadRequest);
+                return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı oluşturulurken bir hata oluştu", StatusCodes.Status400BadRequest);
             }
-             result = await _userManager.AddToRolesAsync(user, registerDto.Role);
+            result = await _userManager.AddToRolesAsync(user, registerDto.Role);
             {
                 if (!result.Succeeded)
                 {
@@ -106,19 +107,19 @@ public class AuthManager :IAuthService
 
             var userDto = new ApplicationUserDto
             {
-                Id= user.Id,
-                FirstName=user.FirstName,
-                LastName=user.LastName,
-                UserName=user.UserName,
-                Gender=user.Gender,
-                Email=user.Email,
-                Address=user.Address,
-                City=user.City
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName,
+                Gender = user.Gender,
+                Email = user.Email,
+                Address = user.Address,
+                City = user.City
             };
-            return ResponseDto<ApplicationUserDto>.Success(userDto,StatusCodes.Status201Created);
-                
+            return ResponseDto<ApplicationUserDto>.Success(userDto, StatusCodes.Status201Created);
 
-            
+
+
         }
         catch (System.Exception ex)
         {
@@ -136,7 +137,7 @@ public class AuthManager :IAuthService
     {
         try
         {
-            var roles= await _userManager.GetRolesAsync(user);
+            var roles = await _userManager.GetRolesAsync(user);
 
             var claims = new List<Claim>
             {
@@ -144,32 +145,32 @@ public class AuthManager :IAuthService
                 new Claim(ClaimTypes.Name,user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
 
-            }.Union(roles.Select(x=> new Claim(ClaimTypes.Role,x)));
+            }.Union(roles.Select(x => new Claim(ClaimTypes.Role, x)));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfig.Secret));
-            var credentials = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
-            var expiry =DateTime.Now.AddDays(Convert.ToDouble(_jwtConfig.AccessTokenExpiration));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expiry = DateTime.Now.AddDays(Convert.ToDouble(_jwtConfig.AccessTokenExpiration));
 
-            var token = new  JwtSecurityToken(
+            var token = new JwtSecurityToken(
 
                 issuer: _jwtConfig.Issuer,
                 audience: _jwtConfig.Audience,
-                claims:claims,
-                expires:expiry,
-                signingCredentials:credentials
+                claims: claims,
+                expires: expiry,
+                signingCredentials: credentials
             );
 
             var tokendto = new TokenDto()
             {
-                AccessToken= new  JwtSecurityTokenHandler().WriteToken(token),
-                AccessTokenExpirationDate=expiry
+                AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
+                AccessTokenExpirationDate = expiry
             };
             return tokendto;
 
         }
         catch (System.Exception ex)
         {
-            
+
             System.Console.WriteLine($"Token Oluşturulurken Bir hata oluştu{ex.Message}");
             throw;
         }
