@@ -50,21 +50,19 @@ public class AuthManager : IAuthService
             if (user == null)
             {
                 return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı", StatusCodes.Status400BadRequest);
-
             }
             var isValidPassword = await _userManager.CheckPasswordAsync(user, loginDto.Password);
             if (!isValidPassword)
             {
                 return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı", StatusCodes.Status400BadRequest);
             }
-            // token yaratmamız gerekiyor. GenerateJwtToken(user).
             var tokenDto = await GenerateJwtToken(user);
             return ResponseDto<TokenDto>.Success(tokenDto, StatusCodes.Status200OK);
 
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
-            System.Console.WriteLine($"Giriş yapılırken hata oluştu {ex.Message}");
+            System.Console.WriteLine($"Giriş yapılırken bir hata oluştu: {ex.Message}");
             throw;
         }
     }
@@ -76,7 +74,7 @@ public class AuthManager : IAuthService
             var existingUser = await _userManager.FindByNameAsync(registerDto.UserName);
             if (existingUser != null)
             {
-                return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten var", StatusCodes.Status400BadRequest);
+                return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten kullanılmakta", StatusCodes.Status400BadRequest);
             }
             var user = new ApplicationUser(
                 firstName: registerDto.FirstName,
@@ -90,40 +88,32 @@ public class AuthManager : IAuthService
                 EmailConfirmed = true,
                 Address = registerDto.Address,
                 City = registerDto.City
-
             };
             var result = await _userManager.CreateAsync(user, registerDto.Password);
             if (!result.Succeeded)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı oluşturulurken bir hata oluştu", StatusCodes.Status400BadRequest);
             }
-            result = await _userManager.AddToRolesAsync(user, registerDto.Role);
+            result = await _userManager.AddToRoleAsync(user, registerDto.Role);
+            if (!result.Succeeded)
             {
-                if (!result.Succeeded)
-                {
-                    return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı rolu atanırken  bir hata oluştu", StatusCodes.Status400BadRequest);
-                }
+                return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı rolü atanırken bir hata oluştu", StatusCodes.Status400BadRequest);
             }
-
             var userDto = new ApplicationUserDto
             {
                 Id = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 UserName = user.UserName,
-                Gender = user.Gender,
                 Email = user.Email,
                 Address = user.Address,
                 City = user.City
             };
             return ResponseDto<ApplicationUserDto>.Success(userDto, StatusCodes.Status201Created);
-
-
-
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
-            System.Console.WriteLine($"Katıy olurken bir hata oluştu {ex.Message}");
+            Console.WriteLine($"Kayıt olunurken bir hata oluştu: {ex.Message}");
             throw;
         }
     }
@@ -133,18 +123,22 @@ public class AuthManager : IAuthService
         throw new NotImplementedException();
     }
 
+
+
+
+
+
+
     private async Task<TokenDto> GenerateJwtToken(ApplicationUser user)
     {
         try
         {
             var roles = await _userManager.GetRolesAsync(user);
-
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier,user.Id),
-                new Claim(ClaimTypes.Name,user.UserName),
-                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
-
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             }.Union(roles.Select(x => new Claim(ClaimTypes.Role, x)));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfig.Secret));
@@ -152,28 +146,24 @@ public class AuthManager : IAuthService
             var expiry = DateTime.Now.AddDays(Convert.ToDouble(_jwtConfig.AccessTokenExpiration));
 
             var token = new JwtSecurityToken(
-
                 issuer: _jwtConfig.Issuer,
                 audience: _jwtConfig.Audience,
                 claims: claims,
                 expires: expiry,
                 signingCredentials: credentials
             );
-
-            var tokendto = new TokenDto()
+            var tokenDto = new TokenDto
             {
                 AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
                 AccessTokenExpirationDate = expiry
             };
-            return tokendto;
+            return tokenDto;
 
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
-
-            System.Console.WriteLine($"Token Oluşturulurken Bir hata oluştu{ex.Message}");
+            System.Console.WriteLine($"Token oluşturulurken bir hata oluştu: {ex.Message}");
             throw;
         }
-
     }
 }
