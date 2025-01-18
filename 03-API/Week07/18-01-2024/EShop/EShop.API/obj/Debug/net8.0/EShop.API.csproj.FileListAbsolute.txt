@@ -156,3 +156,4 @@ D:\GitHubb\BackendMasteryBootcamp\03-API\Week07\18-01-2024\EShop\EShop.API\obj\D
 D:\GitHubb\BackendMasteryBootcamp\03-API\Week07\18-01-2024\EShop\EShop.API\obj\Debug\net8.0\EShop.API.pdb
 D:\GitHubb\BackendMasteryBootcamp\03-API\Week07\18-01-2024\EShop\EShop.API\obj\Debug\net8.0\EShop.API.genruntimeconfig.cache
 D:\GitHubb\BackendMasteryBootcamp\03-API\Week07\18-01-2024\EShop\EShop.API\obj\Debug\net8.0\ref\EShop.API.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week07\18-01-2024\EShop\EShop.API\bin\Debug\net8.0\AutoMapper.dll

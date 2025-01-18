@@ -6,6 +6,7 @@ using EShop.Data.Concrete.Repositories;
 using EShop.Entity.Concrete;
 using EShop.Services.Abstract;
 using EShop.Services.Concrete;
+using EShop.Services.Mapping;
 using EShop.Shared.Configurations.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -23,6 +24,8 @@ builder.Services.AddDbContext<EShopDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+ 
 
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
@@ -58,11 +61,13 @@ builder.Services.AddAuthentication(options =>
 });
 
 
-
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 builder.Services.AddScoped<IAuthService, AuthManager>();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
 var app = builder.Build();
@@ -73,6 +78,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication(); //role göre giriş yapmaya bakıyor
 app.UseAuthorization();
 
 app.MapControllers();
