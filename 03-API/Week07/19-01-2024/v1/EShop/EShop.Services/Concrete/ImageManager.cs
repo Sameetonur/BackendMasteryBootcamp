@@ -18,9 +18,30 @@ public class ImageManager : IImageService
             
         }
     }
-    public ResponseDto<bool> DeleteImage(string imageUrl)
+    public  ResponseDto<NoContent> DeleteImage(string imageUrl)
     {
-        throw new NotImplementedException();
+        try
+        {
+            if (string.IsNullOrWhiteSpace(imageUrl))
+            {
+                return ResponseDto<NoContent>.Fail("Resim yolu boş olamaz",StatusCodes.Status400BadRequest);
+                
+            }
+
+            var FileName = Path.GetFileName(imageUrl);
+            var fileFullPath= Path.Combine(_imageFolderPath,FileName);
+            if (!File.Exists(fileFullPath))
+            {
+                return ResponseDto<NoContent>.Fail("Resim dosyası bulunamadı", StatusCodes.Status400BadRequest);
+            }
+            File.Delete(fileFullPath);
+            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+        }
+        catch (System.Exception ex)
+        {
+            return ResponseDto<NoContent>.Fail( ex.Message,StatusCodes.Status500InternalServerError);
+            
+        }
     }
 
     public async Task<ResponseDto<string>> UploadImageAsync(IFormFile image)

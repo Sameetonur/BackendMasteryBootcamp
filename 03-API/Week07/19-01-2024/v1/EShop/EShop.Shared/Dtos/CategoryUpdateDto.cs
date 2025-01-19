@@ -16,7 +16,6 @@ public class CategoryUpdateDto
     [StringLength(300, ErrorMessage = "Kategori açıklaması en fazla 300 karakter olmalıdır.")]
     public string? Description { get; set; }
 
-    [Required(ErrorMessage = "Kategori resmi zorunludur.")]
     public IFormFile? Image { get; set; }
 
     [Required(ErrorMessage = "Aktif/Pasif durumu zorunludur.")]

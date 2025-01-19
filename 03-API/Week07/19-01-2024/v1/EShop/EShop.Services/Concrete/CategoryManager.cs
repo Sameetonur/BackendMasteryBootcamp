@@ -160,12 +160,14 @@ namespace EShop.Services.Concrete
                 {
                     return ResponseDto<NoContent>.Fail("Bu kategoriye ait ürünler olduğu için silinemez! Önce ürünleri silmeniz ya da kategorisini değiştirmeniz gerekmektedir!", StatusCodes.Status400BadRequest);
                 }
+                
                 _categoryRepository.Delete(category);
                 var result = await _unitOfWork.SaveAsync();
                 if (result < 1)
                 {
                     return ResponseDto<NoContent>.Fail("Kategori silinirken bir hata oluştu!", StatusCodes.Status500InternalServerError);
                 }
+                _imageManager.DeleteImage(category.ImageUrl);
                 return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
 
             }
@@ -223,6 +225,17 @@ namespace EShop.Services.Concrete
                 if (existsCategoryName)
                 {
                     return ResponseDto<NoContent>.Fail("Bu adda kategori mevcut!", StatusCodes.Status400BadRequest);
+                }
+                //Resim Operasyonu
+                if (categoryUpdateDto.Image !=null)
+                {
+                    var imageResponse = await _imageManager.UploadImageAsync(categoryUpdateDto.Image);
+                    if (!imageResponse.IsSuccessful)
+                    {
+                        return ResponseDto<NoContent>.Fail(imageResponse.Error, imageResponse.StatusCode);
+                    }
+                    _imageManager.DeleteImage(category.ImageUrl);
+                    category.ImageUrl = imageResponse.Data ?? "/images/default-category.png";
                 }
                 _mapper.Map(categoryUpdateDto, category);
                 _categoryRepository.Update(category);
