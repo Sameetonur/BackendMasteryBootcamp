@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "uDMQxHTUwXcoLGawXvEvD2RWCFqy6QJ3qumm+ovTUKw=",
+  "Source": "EShop.API",
+  "BasePath": "_content/EShop.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EShop.API\\wwwroot",
+      "Source": "EShop.API",
+      "ContentRoot": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.API\\wwwroot\\",
+      "BasePath": "_content/EShop.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.API\\wwwroot\\images\\17e39f53-6095-4251-a9bb-3a6bbdf6b293.jpg",
+      "SourceId": "EShop.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.API\\wwwroot\\",
+      "BasePath": "_content/EShop.API",
+      "RelativePath": "images/17e39f53-6095-4251-a9bb-3a6bbdf6b293.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\17e39f53-6095-4251-a9bb-3a6bbdf6b293.jpg"
+    },
+    {
+      "Identity": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.API\\wwwroot\\images\\96415af5-6e70-4263-ade9-b6c061d461f0.png",
+      "SourceId": "EShop.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.API\\wwwroot\\",
+      "BasePath": "_content/EShop.API",
+      "RelativePath": "images/96415af5-6e70-4263-ade9-b6c061d461f0.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\96415af5-6e70-4263-ade9-b6c061d461f0.png"
+    }
+  ]
+}
