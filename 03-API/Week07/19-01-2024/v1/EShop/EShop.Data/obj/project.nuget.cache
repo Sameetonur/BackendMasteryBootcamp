@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Meji4HHMXfo=",
+  "dgSpecHash": "UWiyOmbUS1E=",
   "success": true,
-  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.Data\\EShop.Data.csproj",
+  "projectFilePath": "d:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.Data\\EShop.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samet\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

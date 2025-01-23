@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5IabNZipRgg=",
+  "dgSpecHash": "BGMeWP1OKqA=",
   "success": true,
-  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.Services\\EShop.Services.csproj",
+  "projectFilePath": "d:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week07\\19-01-2024\\v1\\EShop\\EShop.Services\\EShop.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samet\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
