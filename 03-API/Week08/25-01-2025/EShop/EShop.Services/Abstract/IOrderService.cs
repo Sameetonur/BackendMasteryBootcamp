@@ -14,8 +14,7 @@ public interface IOrderService
     Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync();
 
     // Sipariş ekler
-    Task<ResponseDto<OrderDto>> AddAsync(OrderCreateDto orderDto);
-
+    Task<ResponseDto<OrderDto>> AddAsync(OrderCreateDto orderCreateDto);
 
     // Siparişi siler (Soft delete)
     Task<ResponseDto<NoContent>> SoftDeleteAsync(int id);
@@ -25,6 +24,9 @@ public interface IOrderService
 
     // Sipariş sayısını getirir
     Task<ResponseDto<int>> CountAsync();
+
+    // Sepeti siparişe dönüştürür (Checkout)
+    Task<ResponseDto<OrderDto>> CheckoutAsync(string userId);
 
     // Sipariş sayısını filtreye göre getirir (Örn: aktif, pasif)
     Task<ResponseDto<IEnumerable<OrderDto>>> GetByStatusAsync(OrderStatusType? status);

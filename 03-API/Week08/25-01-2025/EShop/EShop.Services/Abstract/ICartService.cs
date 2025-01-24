@@ -26,9 +26,6 @@ public interface ICartService
     // Sepetin toplam tutarını hesaplar
     Task<ResponseDto<decimal>> GetCartTotalAsync(string userId);
 
-    // Sepeti siparişe dönüştürür (Checkout)
-    Task<ResponseDto<OrderDto>> CheckoutAsync(string userId);
-
     // Sepetteki ürün sayısını getirir
     Task<ResponseDto<int>> GetCartItemCountAsync(string userId);
 
