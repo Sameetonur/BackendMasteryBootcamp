@@ -12,10 +12,13 @@ public interface ICartService
     Task<ResponseDto<CartDto>> AddToCartAsync(string userId, CartItemCreateDto cartItemCreateDto);
 
     // Sepetten ürün çıkarır
-    Task<ResponseDto<NoContent>> RemoveFromCartAsync(int cartItemId);
+    Task<ResponseDto<NoContent>> DeleteCartAsync(int cartItemId);
 
     // Sepetteki bir ürünün miktarını günceller
-    Task<ResponseDto<CartDto>> UpdateCartAsync(CartUpdateDto cartUpdateDto);
+    Task<ResponseDto<CartDto>> UpdateCartAsync(CartItemUpdateDto cartItemUpdateDto);
+
+    // Sepetin aktif/pasif durumunu günceller
+    Task<ResponseDto<int>> UpdateCartActiveAsync(bool? isActive);
 
     // Kullanıcının sepetini tamamen temizler
     Task<ResponseDto<NoContent>> ClearCartAsync(string userId);
