@@ -11,13 +11,13 @@ public interface ICartService
 
     Task<ResponseDto<CartDto>> GetCartAsync(string applicationUserId);
     
-    Task<ResponseDto<NoContent>> AddToCartAsync(CartItemCreateDto  cartItemCreateDto);
+    Task<ResponseDto<CartItemDto>> AddToCartAsync(CartItemCreateDto  cartItemCreateDto);
 
     Task<ResponseDto<NoContent>> DeleteCartAsync(int cartItemId);
 
     Task<ResponseDto<NoContent>> ClearCartAsync(string applicationUserId);
 
-    Task<ResponseDto<NoContent>> ChangeQuantityAsync(CartItemUpdateDto cartItemUpdateDto);
+    Task<ResponseDto<CartItemDto>> ChangeQuantityAsync(CartItemUpdateDto cartItemUpdateDto);
 
 
 
