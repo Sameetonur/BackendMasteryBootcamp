@@ -1,6 +1,6 @@
 namespace EShop.Shared.ComplexTypes;
 
-public enum GenderType
+public enum Gender
 {
     None = 1,
     Female = 2,

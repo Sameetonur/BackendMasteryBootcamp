@@ -14,6 +14,19 @@ namespace EShop.Services.Mapping
                 CreateMap<Category, CategoryCreateDto>().ReverseMap();
                 CreateMap<Category, CategoryUpdateDto>().ReverseMap();
             #endregion
+
+            #region Product
+
+                CreateMap<Product, ProductDto>()
+                    .ForMember(dest => dest.Categories, opt =>opt
+                    .MapFrom(src =>src.ProductCategories
+                    .Select(pc=>pc.Category))).ReverseMap();
+
+                CreateMap<Product, ProductCreateDto>().ReverseMap();
+                CreateMap<Product, ProductUpdateDto>().ReverseMap();
+            #endregion
+
+            
         }
     }
 }

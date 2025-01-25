@@ -77,7 +77,7 @@ namespace EShop.Services.Concrete
 
         }
 
-        public async Task<ResponseDto<int>> CountAsync(bool? isActive)
+        public async Task<ResponseDto<int>> CountAsync(bool isActive)
         {
             try
             {
@@ -109,7 +109,7 @@ namespace EShop.Services.Concrete
             }
         }
 
-        public async Task<ResponseDto<IEnumerable<CategoryDto>>> GetAllAsync(bool? isActive)
+        public async Task<ResponseDto<IEnumerable<CategoryDto>>> GetAllAsync(bool isActive)
         {
             try
             {

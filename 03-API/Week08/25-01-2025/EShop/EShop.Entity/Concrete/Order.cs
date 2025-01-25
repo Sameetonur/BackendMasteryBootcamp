@@ -19,6 +19,6 @@ public class Order : BaseEntity
     public ApplicationUser? ApplicationUser { get; set; }
     public string? Address { get; set; }
     public string? City { get; set; }
-    public OrderStatusType OrderStatus { get; set; }
+    public OrderStatus OrderStatus { get; set; }
     public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

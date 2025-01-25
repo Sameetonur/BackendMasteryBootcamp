@@ -6,31 +6,65 @@ namespace EShop.Services.Abstract;
 
 public interface ICartService
 {
-    Task<ResponseDto<CartDto>> GetCartByUserIdAsync(string userId); // Sepeti kullanıcıya göre getirir
 
-    // Sepete ürün ekler
-    Task<ResponseDto<CartDto>> AddToCartAsync(string userId, CartItemCreateDto cartItemCreateDto);
+    Task<ResponseDto<CartDto>> CreateCartAsync(string applicationUserId);
 
-    // Sepetten ürün çıkarır
+    Task<ResponseDto<CartDto>> GetCartAsync(string applicationUserId);
+    
+    Task<ResponseDto<NoContent>> AddToCartAsync(CartItemCreateDto  cartItemCreateDto);
+
     Task<ResponseDto<NoContent>> DeleteCartAsync(int cartItemId);
 
-    // Sepetteki bir ürünün miktarını günceller
-    Task<ResponseDto<CartDto>> UpdateCartAsync(CartItemUpdateDto cartItemUpdateDto);
+    Task<ResponseDto<NoContent>> ClearCartAsync(string applicationUserId);
 
-    // Sepetin aktif/pasif durumunu günceller
-    Task<ResponseDto<int>> UpdateCartActiveAsync(bool? isActive);
+    Task<ResponseDto<NoContent>> ChangeQuantityAsync(CartItemUpdateDto cartItemUpdateDto);
 
-    // Kullanıcının sepetini tamamen temizler
-    Task<ResponseDto<NoContent>> ClearCartAsync(string userId);
 
-    // Sepetin toplam tutarını hesaplar
-    Task<ResponseDto<decimal>> GetCartTotalAsync(string userId);
 
-    // Sepetteki ürün sayısını getirir
-    Task<ResponseDto<int>> GetCartItemCountAsync(string userId);
 
-    // Sepetteki ürünün varlığını kontrol eder
-    Task<ResponseDto<bool>> IsProductInCartAsync(string userId, int productId);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Task<ResponseDto<CartDto>> GetCartByUserIdAsync(string userId); // Sepeti kullanıcıya göre getirir
+
+    // // Sepete ürün ekler
+    // Task<ResponseDto<CartDto>> AddToCartAsync(string userId, CartItemCreateDto cartItemCreateDto);
+
+    // // Sepetten ürün çıkarır
+    // Task<ResponseDto<NoContent>> DeleteCartAsync(int cartItemId);
+
+    // // Sepetteki bir ürünün miktarını günceller
+    // Task<ResponseDto<CartDto>> UpdateCartAsync(CartItemUpdateDto cartItemUpdateDto);
+
+
+    // // Kullanıcının sepetini tamamen temizler
+    // Task<ResponseDto<NoContent>> ClearCartAsync(string userId);
+
+    // // Sepetin toplam tutarını hesaplar
+    // Task<ResponseDto<decimal>> GetCartTotalAsync(string userId);
+
+
+
+
 
 
 }

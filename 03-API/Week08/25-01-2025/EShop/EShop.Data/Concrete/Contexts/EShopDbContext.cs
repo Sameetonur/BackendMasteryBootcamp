@@ -337,7 +337,7 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
 
         #region Users
         var hasher = new PasswordHasher<ApplicationUser>();
-        var adminUser = new ApplicationUser("Ali", "Cabbar", new DateTime(1995, 1, 1), GenderType.Male)
+        var adminUser = new ApplicationUser("Ali", "Cabbar", new DateTime(1995, 1, 1), Gender.Male)
         {
             Id = "d4757375-a497-496b-85dc-a510027bd9b1",
             UserName = "adminuser@gmail.com",
@@ -351,7 +351,7 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
         adminUser.PasswordHash = hasher.HashPassword(adminUser, "Qwe123.,");
 
 
-        var normalUser = new ApplicationUser("Esin", "Çelik", new DateTime(1995, 1, 1), GenderType.Female)
+        var normalUser = new ApplicationUser("Esin", "Çelik", new DateTime(1995, 1, 1), Gender.Female)
         {
             Id = "d2fe392f-4f60-4963-ba3a-ea52b71fb53e",
             UserName = "normaluser@gmail.com",

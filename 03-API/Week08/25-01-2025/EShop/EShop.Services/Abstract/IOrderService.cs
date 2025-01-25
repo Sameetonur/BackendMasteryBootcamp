@@ -7,35 +7,95 @@ namespace EShop.Services.Abstract;
 
 public interface IOrderService
 {
-    // Siparişi ID'ye göre getirir
-    Task<ResponseDto<OrderDto>> GetAsync(int id);
-
-    // Tüm siparişleri getirir
+   Task<ResponseDto<OrderDto>> GetAsync(int id);
     Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync();
 
-    // Sipariş ekler
-    Task<ResponseDto<OrderDto>> AddAsync(OrderCreateDto orderCreateDto);
+    Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(OrderStatus orderStatus);
 
-    // Siparişi siler (Soft delete)
-    Task<ResponseDto<NoContent>> SoftDeleteAsync(int id);
+    Task<ResponseDto<OrderDto>> GetAllAsync(string applicationUserId);
 
-    // Siparişi kalıcı olarak siler (Hard delete)
-    Task<ResponseDto<NoContent>> HardDeleteAsync(int id);
+    Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(DateTime startDate, DateTime endDate);
 
-    // Sipariş sayısını getirir
-    Task<ResponseDto<int>> CountAsync();
+    Task<ResponseDto<OrderDto>> AddAsync(OrderCreateDto  orderCreateDto);
 
-    // Sepeti siparişe dönüştürür (Checkout)
-    Task<ResponseDto<OrderDto>> CheckoutAsync(string userId);
+    Task<ResponseDto<OrderDto>> UpdateOrderStatusAsync(int id, OrderStatus status);
 
-    // Sipariş sayısını filtreye göre getirir (Örn: aktif, pasif)
-    Task<ResponseDto<IEnumerable<OrderDto>>> GetByStatusAsync(OrderStatusType? status);
+    Task<ResponseDto<NoContent>> CancelOrderAsync(int id); 
 
-    // Siparişin durumunu günceller (Örn: gönderildi, onaylandı vb.)
-    Task<ResponseDto<OrderDto>> UpdateOrderStatusAsync(int id, OrderStatusType status);
 
-    // Siparişi kullanıcıya göre getirir
-    Task<ResponseDto<IEnumerable<OrderDto>>> GetUserOrdersAsync(string userId);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // // Siparişi ID'ye göre getirir
+    // Task<ResponseDto<OrderDto>> GetAsync(int id);
+
+    // // Tüm siparişleri getirir
+    // Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync();
+
+    // // Sipariş ekler
+    // Task<ResponseDto<OrderDto>> AddAsync(OrderCreateDto orderCreateDto);
+
+    // // Siparişi siler (Soft delete)
+    // Task<ResponseDto<NoContent>> SoftDeleteAsync(int id);
+
+    // // Siparişi kalıcı olarak siler (Hard delete)
+    // Task<ResponseDto<NoContent>> HardDeleteAsync(int id);
+
+    // // Sipariş sayısını getirir
+    // Task<ResponseDto<int>> CountAsync();
+
+    // // Sepeti siparişe dönüştürür (Checkout)
+    // Task<ResponseDto<OrderDto>> CheckoutAsync(string userId);
+
+    // // Sipariş sayısını filtreye göre getirir (Örn: aktif, pasif)
+    // Task<ResponseDto<IEnumerable<OrderDto>>> GetByStatusAsync(OrderStatusType? status);
+
+    // // Siparişin durumunu günceller (Örn: gönderildi, onaylandı vb.)
+    // Task<ResponseDto<OrderDto>> UpdateOrderStatusAsync(int id, OrderStatusType status);
+
+    // // Siparişi kullanıcıya göre getirir
+    // Task<ResponseDto<IEnumerable<OrderDto>>> GetUserOrdersAsync(string userId);
 
 
 }

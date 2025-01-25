@@ -7,19 +7,28 @@ namespace EShop.Services.Abstract;
 public interface IProductService
 {
     Task<ResponseDto<ProductDto>> GetAsync(int id);
+    Task<ResponseDto<ProductDto>> GetWitchCategoriesAsync(int id);
     Task<ResponseDto<IEnumerable<ProductDto>>> GetAllAsync();
-    Task<ResponseDto<IEnumerable<ProductDto>>> GetAllAsync(bool? isActive);
-    Task<ResponseDto<ProductDto>> AddAsync(ProductCreateDto  productCreateDto);
-    Task<ResponseDto<NoContent>> UpdateAsync(ProductUpdateDto  productUpdateDto);
-    Task<ResponseDto<IEnumerable<ProductDto>>> GetCategoryProductsAsync(int categoryId);
-    Task<ResponseDto<IEnumerable<ProductDto>>> GetByPriceRangeAsync(decimal minPrice, decimal maxPrice);
-    Task<ResponseDto<IEnumerable<ProductDto>>> GetLimitedProductsAsync(int limit);
-    Task<ResponseDto<IEnumerable<ProductDto>>> SearchByNameAsync(string name);
+    Task<ResponseDto<IEnumerable<ProductDto>>> GetAllAsync(bool isActive);
+
+    Task<ResponseDto<IEnumerable<ProductDto>>> GetAllWithCategoriesAsync(int id);
+    Task<ResponseDto<IEnumerable<ProductDto>>> GetByCategoriesAsync(int categoryId);
+
+    Task<ResponseDto<ProductDto>> AddAsync(ProductCreateDto productCreateDto);
+
+    Task<ResponseDto<NoContent>> UpdateAsync(ProductUpdateDto productUpdateDto);
+
     Task<ResponseDto<NoContent>> SoftDeleteAsync(int id);
     Task<ResponseDto<NoContent>> HardDeleteAsync(int id);
+
     Task<ResponseDto<int>> CountAsync();
-    Task<ResponseDto<int>> CountAsync(bool? isActive);
+    Task<ResponseDto<int>> CountAsync(bool isActive);
+
     Task<ResponseDto<bool>> UpdateIsActiveAsync(int id);
+
+     
+    
+    
 
 
 }

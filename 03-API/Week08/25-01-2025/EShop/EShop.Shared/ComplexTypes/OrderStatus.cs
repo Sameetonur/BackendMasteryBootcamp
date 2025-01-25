@@ -1,6 +1,6 @@
 namespace EShop.Shared.ComplexTypes;
 
-public enum OrderStatusType
+public enum OrderStatus
 {
     Pending = 0,
     Proccessing = 1,

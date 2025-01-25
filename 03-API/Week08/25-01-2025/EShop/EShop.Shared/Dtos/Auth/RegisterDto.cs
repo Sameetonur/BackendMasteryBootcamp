@@ -19,7 +19,7 @@ public class RegisterDto
     public string? City { get; set; }
 
     [Required(ErrorMessage = "Cinsiyet alanı boş bırakılamaz.")]
-    public GenderType Gender { get; set; }
+    public Gender Gender { get; set; }
 
     [Required(ErrorMessage = "Doğum tarihi alanı boş bırakılamaz.")]
     public DateTime DateOfBirth { get; set; }

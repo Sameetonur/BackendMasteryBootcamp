@@ -20,7 +20,6 @@ public class ProductUpdateDto
     [Range(0.01, double.MaxValue, ErrorMessage = "Ürün fiyatı 0'dan büyük olmalıdır.")]
     public decimal? Price { get; set; }
 
-    [Required(ErrorMessage = "Ürün resmi zorunludur.")]
     public IFormFile? Image { get; set; }
 
     [Required(ErrorMessage = "Her ürün için en az bir kategori zorunludur.")]

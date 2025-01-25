@@ -10,7 +10,7 @@ public class ApplicationUser : IdentityUser
     {
 
     }
-    public ApplicationUser(string? firstName, string? lastName, DateTime dateOfBirth, GenderType gender)
+    public ApplicationUser(string? firstName, string? lastName, DateTime dateOfBirth, Gender gender)
     {
         FirstName = firstName;
         LastName = lastName;
@@ -23,5 +23,5 @@ public class ApplicationUser : IdentityUser
     public string? Address { get; set; }
     public string? City { get; set; }
     public DateTime DateOfBirth { get; set; }
-    public GenderType Gender { get; set; }
+    public Gender Gender { get; set; }
 }

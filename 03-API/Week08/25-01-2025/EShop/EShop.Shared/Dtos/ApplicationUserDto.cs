@@ -11,7 +11,7 @@ public class ApplicationUserDto
     public string? Address { get; set; }
     public string? City { get; set; }
     public DateTime DateOfBirth { get; set; }
-    public GenderType Gender { get; set; }
+    public Gender Gender { get; set; }
     public string? UserName { get; set; }
     public string? Email { get; set; }
     public bool EmailConfirmed { get; set; }
