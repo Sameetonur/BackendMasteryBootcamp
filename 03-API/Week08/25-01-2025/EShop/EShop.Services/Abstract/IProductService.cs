@@ -11,7 +11,7 @@ public interface IProductService
     Task<ResponseDto<IEnumerable<ProductDto>>> GetAllAsync();
     Task<ResponseDto<IEnumerable<ProductDto>>> GetAllAsync(bool isActive);
 
-    Task<ResponseDto<IEnumerable<ProductDto>>> GetAllWithCategoriesAsync(int id);
+    Task<ResponseDto<IEnumerable<ProductDto>>> GetAllWithCategoriesAsync();
     Task<ResponseDto<IEnumerable<ProductDto>>> GetByCategoriesAsync(int categoryId);
 
     Task<ResponseDto<ProductDto>> AddAsync(ProductCreateDto productCreateDto);

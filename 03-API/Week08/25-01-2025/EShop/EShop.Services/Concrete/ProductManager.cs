@@ -66,7 +66,6 @@ public class ProductManager : IProductService
                               .CategoryIds
                               .Select(categoryId => new ProductCategory(Product.Id, categoryId))
                               .ToList();
-
             _productRepository.Update(Product);
             result = await _unitOfWork.SaveAsync();
             if (result > 1)
@@ -158,7 +157,7 @@ public class ProductManager : IProductService
         }
     }
 
-    public async Task<ResponseDto<IEnumerable<ProductDto>>> GetAllWithCategoriesAsync(int id)
+    public async Task<ResponseDto<IEnumerable<ProductDto>>> GetAllWithCategoriesAsync()
     {
         try
         {
