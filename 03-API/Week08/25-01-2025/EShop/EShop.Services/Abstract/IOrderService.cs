@@ -10,7 +10,7 @@ public interface IOrderService
    Task<ResponseDto<OrderDto>> GetAsync(int id);
     Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync();
 
-    Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(OrderStatus orderStatus);
+    Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(OrderStatus orderStatus , string? applicationUserId = null);
 
     Task<ResponseDto<OrderDto>> GetAllAsync(string applicationUserId);
 
