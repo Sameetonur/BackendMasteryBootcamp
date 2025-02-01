@@ -40,6 +40,7 @@ namespace EShop.Services.Mapping
             CreateMap<OrderItem, OrderItemDto>()
                 .ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product))
                 .ForMember(dest=> dest.OrderId, opt => opt.Ignore())
+                .ForMember(dest => dest.OrderId ,opt => opt.Ignore())
                 .ReverseMap();
             #endregion
 
