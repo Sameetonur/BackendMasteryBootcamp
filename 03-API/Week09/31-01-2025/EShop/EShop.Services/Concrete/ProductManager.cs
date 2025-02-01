@@ -268,7 +268,18 @@ public class ProductManager : IProductService
                 return ResponseDto<NoContent>.Fail("Ürün bulunamadı", StatusCodes.Status404NotFound);
             }
             _productRepository.Delete(product);
-            await _unitOfWork.SaveAsync();
+             var result=await _unitOfWork.SaveAsync();
+             if (result<1)
+             {
+                return ResponseDto<NoContent>.Fail("Silme işleminde bir sorun oluştu",StatusCodes.Status500InternalServerError);
+                
+             }
+            var deleteResponse = _imageService.DeleteImage(product.ImageUrl!);
+            if (!deleteResponse.IsSuccessful)
+            {
+                return ResponseDto<NoContent>.Fail("Resim silinirken sorun oluştu", StatusCodes.Status501NotImplemented);
+            }
+
             return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
         }
         catch (System.Exception ex)

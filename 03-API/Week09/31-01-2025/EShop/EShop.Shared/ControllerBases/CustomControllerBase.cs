@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using EShop.Shared.Dtos.ResponseDtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,5 +16,12 @@ namespace EShop.Shared.ControllerBases
                 StatusCode = response.StatusCode
             };
         }
+
+        protected string GetUserId()//kullancıının string ıdsini dönen metod!
+        {
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            return userId!;
+        }
+
     }
 }
