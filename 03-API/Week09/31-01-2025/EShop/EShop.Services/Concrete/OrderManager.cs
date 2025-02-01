@@ -51,13 +51,19 @@ public class OrderManager : IOrderService
             }
 
            
-            var Order = _mapper.Map<Order>(orderCreateDto);
+            var order = _mapper.Map<Order>(orderCreateDto);
+
+            // Order order = new(orderCreateDto.ApplicationUserId, orderCreateDto.Address,orderCreateDto.City)
+            // {
+            //         OrderItems=orderCreateDto.OrderItems
+            //         .Select(x=> new OrderItem(x.ProductId,x.UnitPrice,x.Quantity)).ToList()
+            // };
             //fake ödeme operasyonunu ekleyeceğiz.
-            await _orderRepository.AddAsync(Order);
+            await _orderRepository.AddAsync(order);
             await _uow.SaveAsync();
             // orderıtemler ile ilgili ekstra bir işlem yapmayıp, bunu izleyip sonuçlarını değerlendireceğiz. Gerekdirse buraya gelip gereken işlemleri yapacağız.
              await _cartManager.ClearCartAsync(orderCreateDto.ApplicationUserId);
-             var OrderDto = _mapper.Map<OrderDto>(Order);
+             var OrderDto = _mapper.Map<OrderDto>(order);
              return ResponseDto<OrderDto>.Success(OrderDto, StatusCodes.Status201Created);
 
         }
