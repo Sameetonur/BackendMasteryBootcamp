@@ -161,6 +161,27 @@ public class ProductManager : IProductService
         }
     }
 
+    public async Task<ResponseDto<IEnumerable<ProductDto>>> GetAllDeletedAsync()
+    {
+        try
+        {
+            var products = await _productRepository.GetAllAsync(
+                showIsDeleted: true, predicate: x=>x.IsDeleted
+            ); if (!products.Any())
+            {
+                return ResponseDto<IEnumerable<ProductDto>>.Fail("Herhangi bir silinmiş ürün bulunamadı", StatusCodes.Status404NotFound);
+
+            }
+            var productDtos = _mapper.Map<IEnumerable<ProductDto>>(products);
+            return ResponseDto<IEnumerable<ProductDto>>.Success(productDtos, StatusCodes.Status200OK);
+        }
+        catch (System.Exception ex)
+        {
+
+            return ResponseDto<IEnumerable<ProductDto>>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+        }
+    }
+
     public async Task<ResponseDto<IEnumerable<ProductDto>>> GetAllWithCategoriesAsync()
     {
         try

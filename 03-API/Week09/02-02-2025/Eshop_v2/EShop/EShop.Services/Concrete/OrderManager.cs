@@ -84,6 +84,7 @@ public class OrderManager : IOrderService
                 return ResponseDto<NoContent>.Fail("Sipariş bulunamadı", StatusCodes.Status404NotFound);
             }
             order.IsDeleted = true;
+            order.IsActive=false;
             _orderRepository.Update(order);
             var result = await _uow.SaveAsync();
             if (result > 1)

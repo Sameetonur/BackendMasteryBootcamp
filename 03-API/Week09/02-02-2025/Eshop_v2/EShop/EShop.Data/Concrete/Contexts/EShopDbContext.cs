@@ -220,6 +220,8 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
                     IsDeleted = true
                 }
             );
+            entity.HasQueryFilter(x => !x.IsDeleted); //isdeletedi false olanlarla çalışacak// kategoriler getirildiği zzaman silinmişleri getirmeyecek!
+
         });
 
         builder.Entity<Product>(entity =>
@@ -331,9 +333,18 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
                 new Product("Bike Gloves", "Padded, Size L", 20.00m, "/images/products/bike_gloves.jpg") { Id = 99, IsActive = true, IsDeleted = false },
                 new Product("Bike Shorts", "Padded, Size M", 40.00m, "/images/products/bike_shorts.jpg") { Id = 100, IsActive = true, IsDeleted = false }
             );
+            entity.HasQueryFilter(x => !x.IsDeleted);
         });
 
         builder.Entity<OrderItem>().Property(x => x.UnitPrice).HasColumnType("decimal(10,2)");
+        builder.Entity<OrderItem>().HasQueryFilter(x => !x.IsDeleted);
+
+
+        builder.Entity<Order>().HasQueryFilter(x => !x.IsDeleted);
+
+        builder.Entity<Cart>().HasQueryFilter(x => !x.IsDeleted);
+
+        builder.Entity<CartItem>().HasQueryFilter(x => !x.IsDeleted);
 
         #region Users
         var hasher = new PasswordHasher<ApplicationUser>();
@@ -364,7 +375,7 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
         };
         normalUser.PasswordHash = hasher.HashPassword(normalUser, "Qwe123.,");
 
-        
+
         builder.Entity<ApplicationUser>().HasData(adminUser, normalUser);
         #endregion
 

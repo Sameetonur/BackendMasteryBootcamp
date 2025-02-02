@@ -1,6 +1,8 @@
+using System.Formats.Asn1;
 using EShop.Services.Abstract;
 using EShop.Shared.ControllerBases;
 using EShop.Shared.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -114,6 +116,15 @@ namespace EShop.API.Controllers
         public async Task<IActionResult> UpdateIsActive(int id)
         {
             var response = await _productManager.UpdateIsActiveAsync(id);
+            return CreateResult(response);
+        }
+
+
+        [Authorize(Roles ="Admin")]
+        [HttpGet("get/all/deleted")]
+        public async Task<IActionResult> GetAllDeleted()
+        {
+            var response = await _productManager.GetAllDeletedAsync();
             return CreateResult(response);
         }
     }

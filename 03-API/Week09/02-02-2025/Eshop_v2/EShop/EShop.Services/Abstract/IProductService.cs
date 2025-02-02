@@ -26,6 +26,8 @@ public interface IProductService
 
     Task<ResponseDto<bool>> UpdateIsActiveAsync(int id);
 
+    Task<ResponseDto<IEnumerable<ProductDto>>> GetAllDeletedAsync();
+
      
     
     

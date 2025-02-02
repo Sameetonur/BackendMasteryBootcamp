@@ -12,8 +12,9 @@ public interface IGenericRepository<TEntity> where TEntity : class
     );
     Task<IEnumerable<TEntity>> GetAllAsync();
     Task<IEnumerable<TEntity>> GetAllAsync(
-        Expression<Func<TEntity, bool>> predicate = null,
-        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+        Expression<Func<TEntity, bool>> predicate = null!,
+        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!,
+        bool showIsDeleted = false,
         params Func<IQueryable<TEntity>, IQueryable<TEntity>>[] includes
     );
     Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate);
