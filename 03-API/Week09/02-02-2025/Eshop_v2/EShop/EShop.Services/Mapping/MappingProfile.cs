@@ -31,26 +31,22 @@ namespace EShop.Services.Mapping
             CreateMap<Order, OrderDto>()
                 .ForMember(dest => dest.ApplicationUser, opt => opt.MapFrom(src => src.ApplicationUser))
                 .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems)).ReverseMap();
-            CreateMap<Order, OrderCreateDto>()
-            .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems)).ReverseMap();
+                
+            CreateMap<OrderCreateDto, Order>()
+            .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems));
 
             #endregion
 
             #region OrderItem
             CreateMap<OrderItem, OrderItemDto>()
-                .ForMember(dest => dest.Product, opt => opt.Ignore())
-                .ForMember(dest=>dest.Order, opt =>opt.Ignore());
-                
-            CreateMap<OrderItemDto, OrderItem>()
-                .ForMember(dest => dest.Product, opt => opt.Ignore())
-                .ForMember(dest => dest.OrderId, opt =>opt.Ignore())
-                .ForMember(dest => dest.Order, opt => opt.Ignore())
-                .ForMember(dest => dest.Id, opt => opt.Ignore()); // bu işlemi tersine bir iş yaparken başka işlemler yapmasını istediğimiz için reverse map yapmadık. Böyle de kullanmayı öğretmek amaçlı.
+                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src=> src.Product!.Name));
+            CreateMap<OrderItemDto, OrderItem>();
+            CreateMap<OrderItemCreateDto, OrderItem>();
+               
 
 
             #endregion
-
-
+            
             #region Cart
             CreateMap<Cart, CartDto>()
                 .ForMember(dest => dest.ApplicationUser, opt => opt.MapFrom(src => src.ApplicationUser))
@@ -64,6 +60,14 @@ namespace EShop.Services.Mapping
                 .ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product));
             CreateMap<CartItem, CartItemCreateDto>().ReverseMap();
             CreateMap<CartItem, CartItemUpdateDto>().ReverseMap();
+            #endregion
+
+            #region ApplicationUserRole
+
+                CreateMap<ApplicationUser, ApplicationUserDto>().ReverseMap();
+
+
+
             #endregion
 
 

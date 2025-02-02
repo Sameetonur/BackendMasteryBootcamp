@@ -12,6 +12,6 @@ public class OrderDto
     public string? Address { get; set; }
     public string? City { get; set; }
     public OrderStatus OrderStatus { get; set; }
-    public ICollection<OrderItemDto> OrderItems { get; set; } = new List<OrderItemDto>();
+    public ICollection<OrderItemDto> OrderItems { get; set; } = [];
     public decimal TotalAmount => OrderItems.Sum(x => x.TotalPrice);
 }

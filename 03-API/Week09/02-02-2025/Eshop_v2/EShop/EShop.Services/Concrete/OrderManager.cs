@@ -34,23 +34,23 @@ public class OrderManager : IOrderService
     {
         try
         {
-          
+
             foreach (var orderItem in orderCreateDto.OrderItems)
 
             {
-                 var ExistsProduct = await _productRepository.GetAsync(x=>x.Id == orderItem.ProductId);
-                 if(ExistsProduct==null)
+                var ExistsProduct = await _productRepository.GetAsync(x => x.Id == orderItem.ProductId);
+                if (ExistsProduct == null)
                 {
                     return ResponseDto<OrderDto>.Fail($"{orderItem.ProductId}'li ürün bulunamadığı için işlem iptal edilmiştir", StatusCodes.Status404NotFound);
                 }
                 if (!ExistsProduct.IsActive)
                 {
-                    return ResponseDto<OrderDto>.Fail($"{orderItem.ProductId}'li ürün aktif olmadığı için işlem iptal edilmiştir",StatusCodes.Status400BadRequest);
+                    return ResponseDto<OrderDto>.Fail($"{orderItem.ProductId}'li ürün aktif olmadığı için işlem iptal edilmiştir", StatusCodes.Status400BadRequest);
                 }
-                
+
             }
 
-           
+
             var order = _mapper.Map<Order>(orderCreateDto);
 
             // Order order = new(orderCreateDto.ApplicationUserId, orderCreateDto.Address,orderCreateDto.City)
@@ -62,15 +62,15 @@ public class OrderManager : IOrderService
             await _orderRepository.AddAsync(order);
             await _uow.SaveAsync();
             // orderıtemler ile ilgili ekstra bir işlem yapmayıp, bunu izleyip sonuçlarını değerlendireceğiz. Gerekdirse buraya gelip gereken işlemleri yapacağız.
-             await _cartManager.ClearCartAsync(orderCreateDto.ApplicationUserId);
-             var OrderDto = _mapper.Map<OrderDto>(order);
-             return ResponseDto<OrderDto>.Success(OrderDto, StatusCodes.Status201Created);
+            await _cartManager.ClearCartAsync(orderCreateDto.ApplicationUserId);
+            var OrderDto = _mapper.Map<OrderDto>(order);
+            return ResponseDto<OrderDto>.Success(OrderDto, StatusCodes.Status201Created);
 
         }
         catch (System.Exception ex)
         {
             return ResponseDto<OrderDto>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
-            
+
         }
     }
 
@@ -79,11 +79,11 @@ public class OrderManager : IOrderService
         try
         {
             var order = await _orderRepository.GetAsync(id);
-            if(order==null)
+            if (order == null)
             {
                 return ResponseDto<NoContent>.Fail("Sipariş bulunamadı", StatusCodes.Status404NotFound);
             }
-            order.IsDeleted=true;
+            order.IsDeleted = true;
             _orderRepository.Update(order);
             var result = await _uow.SaveAsync();
             if (result > 1)
@@ -91,7 +91,7 @@ public class OrderManager : IOrderService
                 return ResponseDto<NoContent>.Fail("İşlem tamamlanamadı!", StatusCodes.Status500InternalServerError);
 
             }
-             return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
+            return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
         }
         catch (System.Exception ex)
         {
@@ -105,34 +105,42 @@ public class OrderManager : IOrderService
         try
         {
             var orders = await _orderRepository.GetAllAsync(
-               orderBy: x=>x.OrderByDescending(x=>x.CreateDate),
-               includes: query =>query.Include(x=>x.ApplicationUserId).Include(x=>x.OrderItems)
+               orderBy: x => x.OrderByDescending(x => x.CreateDate),
+               includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
                );
-               if (orders == null || !orders.Any())
-               {
-                    return ResponseDto<IEnumerable<OrderDto>>.Fail("Herhangi bir spariş bilgisi bulunamadı!", StatusCodes.Status404NotFound);
-               }
-                var OrderDtos = _mapper.Map<IEnumerable<OrderDto>>(orders);
-                return ResponseDto<IEnumerable<OrderDto>>.Success(OrderDtos, StatusCodes.Status200OK);
-            
+            if (orders == null || !orders.Any())
+            {
+                return ResponseDto<IEnumerable<OrderDto>>.Fail("Herhangi bir spariş bilgisi bulunamadı!", StatusCodes.Status404NotFound);
+            }
+            var OrderDtos = _mapper.Map<IEnumerable<OrderDto>>(orders);
+            return ResponseDto<IEnumerable<OrderDto>>.Success(OrderDtos, StatusCodes.Status200OK);
+
         }
         catch (System.Exception ex)
         {
-            return ResponseDto < IEnumerable < OrderDto >>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+            return ResponseDto<IEnumerable<OrderDto>>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
 
         }
     }
 
     public async Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(OrderStatus orderStatus, string? applicationUserId = null)
     {
-        try
+        try        
         {
+            var orders = await _orderRepository.GetAllAsync(
+                predicate: x => x.OrderStatus == orderStatus && applicationUserId != null ? x.ApplicationUserId == applicationUserId : x.ApplicationUserId != applicationUserId,
+                orderBy: x => x.OrderByDescending(x => x.CreateDate),
+                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
+                :
+                await _orderRepository.GetAllAsync(
+                predicate: x => x.OrderStatus == orderStatus &&  x.ApplicationUserId == applicationUserId,
+                orderBy: x => x.OrderByDescending(x => x.CreateDate),
+                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
+
+
+
             // (string.IsNullOrEmpty(applicationUserId) || x.ApplicationUserId == applicationUserId),
-            var orders  = await _orderRepository.GetAllAsync(
-                predicate: x=>x.OrderStatus == orderStatus &&
-                  applicationUserId!=null ? x.ApplicationUserId == applicationUserId : true,
-                orderBy : x=>x.OrderByDescending(x=>x.CreateDate),
-                includes: query =>query.Include(x=>x.ApplicationUserId).Include(x=>x.OrderItems)
+
             );
             if (orders == null || !orders.Any())
             {
@@ -155,9 +163,9 @@ public class OrderManager : IOrderService
         {
             // (string.IsNullOrEmpty(applicationUserId) || x.ApplicationUserId == applicationUserId),
             var orders = await _orderRepository.GetAllAsync(
-                predicate: x=>x.ApplicationUserId == applicationUserId, 
+                predicate: x => x.ApplicationUserId == applicationUserId,
                 orderBy: x => x.OrderByDescending(x => x.CreateDate),
-                includes: query => query.Include(x => x.ApplicationUserId).Include(x => x.OrderItems)
+                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
             );
             if (orders == null || !orders.Any())
             {
@@ -178,12 +186,12 @@ public class OrderManager : IOrderService
     {
         try
         {
-            startDate= startDate == null ? new DateTime(1900,1,1): startDate;
+            startDate = startDate == null ? new DateTime(1900, 1, 1) : startDate;
             // (string.IsNullOrEmpty(applicationUserId) || x.ApplicationUserId == applicationUserId),
             var orders = await _orderRepository.GetAllAsync(
-                predicate: x=>x.CreateDate >= startDate && x.CreateDate <= endDate,
-                includes: query => 
-                            query.Include(x => x.ApplicationUserId)
+                predicate: x => x.CreateDate >= startDate && x.CreateDate <= endDate,
+                includes: query =>
+                            query.Include(x => x.ApplicationUser)
                                 .Include(x => x.OrderItems)
             );
             if (orders == null || !orders.Any())
@@ -207,7 +215,7 @@ public class OrderManager : IOrderService
         {
             var order = await _orderRepository.GetAsync(
             predicate: x => x.Id == id,
-            includes: query => query.Include(X => X.ApplicationUserId)
+            includes: query => query.Include(X => X.ApplicationUser)
                                     .Include(x => x.OrderItems)
                                     .ThenInclude(y => y.Product)
         );
@@ -234,7 +242,7 @@ public class OrderManager : IOrderService
             {
                 return ResponseDto<OrderDto>.Fail("Sipariş bulunamadı", StatusCodes.Status404NotFound);
             }
-            order.OrderStatus= status;
+            order.OrderStatus = status;
             _orderRepository.Update(order);
             var result = await _uow.SaveAsync();
             if (result > 1)
