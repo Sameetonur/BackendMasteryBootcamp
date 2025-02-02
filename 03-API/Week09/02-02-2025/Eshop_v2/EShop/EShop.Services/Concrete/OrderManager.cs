@@ -106,7 +106,7 @@ public class OrderManager : IOrderService
         {
             var orders = await _orderRepository.GetAllAsync(
                orderBy: x => x.OrderByDescending(x => x.CreateDate),
-               includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
+               includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems).ThenInclude(y=>y.Product)
                );
             if (orders == null || !orders.Any())
             {
@@ -127,21 +127,23 @@ public class OrderManager : IOrderService
     {
         try        
         {
-            var orders = await _orderRepository.GetAllAsync(
-                predicate: x => x.OrderStatus == orderStatus && applicationUserId != null ? x.ApplicationUserId == applicationUserId : x.ApplicationUserId != applicationUserId,
-                orderBy: x => x.OrderByDescending(x => x.CreateDate),
-                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
-                :
-                await _orderRepository.GetAllAsync(
-                predicate: x => x.OrderStatus == orderStatus &&  x.ApplicationUserId == applicationUserId,
-                orderBy: x => x.OrderByDescending(x => x.CreateDate),
-                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
-
-
-
-            // (string.IsNullOrEmpty(applicationUserId) || x.ApplicationUserId == applicationUserId),
-
-            );
+            var orders =
+               applicationUserId == null ?
+               await _orderRepository.GetAllAsync(
+               predicate: x => x.OrderStatus == orderStatus,
+               orderBy: x => x.OrderByDescending(x => x.CreateDate),
+               includes: query => query
+                               .Include(x => x.ApplicationUser)
+                               .Include(x => x.OrderItems)
+                               .ThenInclude(y=>y.Product)) :
+               await _orderRepository.GetAllAsync(
+                   predicate: x => x.OrderStatus == orderStatus && x.ApplicationUserId == applicationUserId,
+                   orderBy: x => x.OrderByDescending(x => x.CreateDate),
+                   includes: query => query
+                                   .Include(x => x.ApplicationUser)
+                                   .Include(x => x.OrderItems)
+                                   .ThenInclude(y=>y.Product)
+               );
             if (orders == null || !orders.Any())
             {
                 return ResponseDto<IEnumerable<OrderDto>>.Fail("Herhangi bir spariş bilgisi bulunamadı!", StatusCodes.Status404NotFound);
@@ -165,7 +167,7 @@ public class OrderManager : IOrderService
             var orders = await _orderRepository.GetAllAsync(
                 predicate: x => x.ApplicationUserId == applicationUserId,
                 orderBy: x => x.OrderByDescending(x => x.CreateDate),
-                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems)
+                includes: query => query.Include(x => x.ApplicationUser).Include(x => x.OrderItems).ThenInclude(y=>y.Product)
             );
             if (orders == null || !orders.Any())
             {
@@ -192,7 +194,7 @@ public class OrderManager : IOrderService
                 predicate: x => x.CreateDate >= startDate && x.CreateDate <= endDate,
                 includes: query =>
                             query.Include(x => x.ApplicationUser)
-                                .Include(x => x.OrderItems)
+                                .Include(x => x.OrderItems).ThenInclude(y=>y.Product)
             );
             if (orders == null || !orders.Any())
             {
