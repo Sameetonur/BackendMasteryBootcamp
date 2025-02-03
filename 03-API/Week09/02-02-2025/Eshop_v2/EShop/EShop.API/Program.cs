@@ -69,7 +69,7 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICartService, CartManager>();
 builder.Services.AddScoped<IOrderService, OrderManager>();
-builder.Services.AddScoped<IImageService,ImageManager>();
+builder.Services.AddScoped<IImageService, ImageManager>();
 
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
