@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B8Q/NFkFRbM=",
+  "dgSpecHash": "V4uqXfqwzdo=",
   "success": true,
-  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.Data\\EShop.Data.csproj",
+  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.Data\\EShop.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samet\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -65,12 +65,5 @@
     "C:\\Users\\samet\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Paket güvenlik açığı verileri alınırken hata oluştu: https://api.nuget.org/v3/index.json kaynağı için hizmet dizini yüklenemiyor."
-    }
-  ]
+  "logs": []
 }

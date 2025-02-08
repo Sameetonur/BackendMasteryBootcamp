@@ -1,55 +1,55 @@
 {
   "Files": [
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\06e291b0-3780-4d10-9bad-39311175031f.png",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\06e291b0-3780-4d10-9bad-39311175031f.png",
       "PackagePath": "staticwebassets\\images\\06e291b0-3780-4d10-9bad-39311175031f.png"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\3a39c6dc-8d94-40d3-a251-206e6ab9a36d.png",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\3a39c6dc-8d94-40d3-a251-206e6ab9a36d.png",
       "PackagePath": "staticwebassets\\images\\3a39c6dc-8d94-40d3-a251-206e6ab9a36d.png"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\3b014dcf-6a22-4794-a345-9a86041d32ad.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\3b014dcf-6a22-4794-a345-9a86041d32ad.jpg",
       "PackagePath": "staticwebassets\\images\\3b014dcf-6a22-4794-a345-9a86041d32ad.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\4200b145-622c-4724-98e4-b5c5967a8821.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\4200b145-622c-4724-98e4-b5c5967a8821.jpg",
       "PackagePath": "staticwebassets\\images\\4200b145-622c-4724-98e4-b5c5967a8821.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\55bfdbdc-7596-414d-9ee0-1972f24c74cc.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\55bfdbdc-7596-414d-9ee0-1972f24c74cc.jpg",
       "PackagePath": "staticwebassets\\images\\55bfdbdc-7596-414d-9ee0-1972f24c74cc.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\8e772700-d719-4c41-a853-25d7b584d053.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\8e772700-d719-4c41-a853-25d7b584d053.jpg",
       "PackagePath": "staticwebassets\\images\\8e772700-d719-4c41-a853-25d7b584d053.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\96415af5-6e70-4263-ade9-b6c061d461f0.png",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\96415af5-6e70-4263-ade9-b6c061d461f0.png",
       "PackagePath": "staticwebassets\\images\\96415af5-6e70-4263-ade9-b6c061d461f0.png"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\964e8149-a312-44bb-9068-ec36977510c1.png",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\964e8149-a312-44bb-9068-ec36977510c1.png",
       "PackagePath": "staticwebassets\\images\\964e8149-a312-44bb-9068-ec36977510c1.png"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\96794245-4406-4976-af01-e3de8bf34704.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\96794245-4406-4976-af01-e3de8bf34704.jpg",
       "PackagePath": "staticwebassets\\images\\96794245-4406-4976-af01-e3de8bf34704.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\9a68957c-2a6f-43bf-b68a-01e65677a74c.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\9a68957c-2a6f-43bf-b68a-01e65677a74c.jpg",
       "PackagePath": "staticwebassets\\images\\9a68957c-2a6f-43bf-b68a-01e65677a74c.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\a1d256cc-138c-48eb-a682-7ff667fa238b.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\a1d256cc-138c-48eb-a682-7ff667fa238b.jpg",
       "PackagePath": "staticwebassets\\images\\a1d256cc-138c-48eb-a682-7ff667fa238b.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\bdc0700d-6616-4658-bd2a-f491ce69b7aa.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\bdc0700d-6616-4658-bd2a-f491ce69b7aa.jpg",
       "PackagePath": "staticwebassets\\images\\bdc0700d-6616-4658-bd2a-f491ce69b7aa.jpg"
     },
     {
-      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\31-01-2025\\EShop\\EShop.API\\wwwroot\\images\\dc9e21a7-7fdb-483c-afdc-8369a0293260.jpg",
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week09\\01-02-2025\\EShop\\EShop.API\\wwwroot\\images\\dc9e21a7-7fdb-483c-afdc-8369a0293260.jpg",
       "PackagePath": "staticwebassets\\images\\dc9e21a7-7fdb-483c-afdc-8369a0293260.jpg"
     },
     {
