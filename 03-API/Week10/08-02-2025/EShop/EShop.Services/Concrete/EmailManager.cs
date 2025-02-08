@@ -1,10 +1,14 @@
 using System;
+using System.Net;
 using System.Net.Mail;
+using Azure;
 using EShop.Services.Abstract;
 using EShop.Shared.Configurations.Email;
 using EShop.Shared.Dtos.ResponseDtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
+using Microsoft.IdentityModel.Tokens;
 
 namespace EShop.Services.Concrete;
 
@@ -47,13 +51,36 @@ public class EmailManager : IEmailService
 
             }
 
+            using var SmtpClient = new SmtpClient(_emailconfig.SmtpServer, _emailconfig.SmtpPort)
+            {
+                Credentials = new NetworkCredential(_emailconfig.SmtpUser, _emailconfig.SmtpPasword),
+                EnableSsl = false,
+                Timeout = 20000 //20 saniye
+            };
+
+            var mailMessage = new MailMessage{
+                From = new MailAddress(_emailconfig.SmtpUser),
+                Subject = subject,
+                Body=htmlBody,
+                IsBodyHtml=true,
+                To = {new MailAddress(emailTo)}
+
+            };
+             await SmtpClient.SendMailAsync(mailMessage);
+
+              return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+
+
         }
-        catch (System.Exception)
+        catch (SmtpException smptex)
         {
             
-            throw;
+            return ResponseDto<NoContent>.Fail(smptex.Message,StatusCodes.Status502BadGateway);//yanlış yol hatası
         }
-        
+        catch(Exception ex)
+        {
+            return ResponseDto<NoContent>.Fail(ex.Message,StatusCodes.Status500InternalServerError);
+        }
     }
 
         private bool IsValidEmail(string emailAddress)

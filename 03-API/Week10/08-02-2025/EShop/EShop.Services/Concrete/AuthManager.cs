@@ -2,6 +2,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Azure;
 using Azure.Core;
 using EShop.Entity.Concrete;
 using EShop.Services.Abstract;
@@ -19,24 +20,86 @@ namespace EShop.Services.Concrete;
 public class AuthManager : IAuthService
 {
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly IEmailService _emailManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
     private JwtConfig _jwtConfig;
     //Aslında burada başka servisler de olacak, ancak henüz yazmadık.
-    public AuthManager(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<JwtConfig> options)
+    public AuthManager(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<JwtConfig> options, IEmailService emailManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _jwtConfig = options.Value;
+        _emailManager = emailManager;
     }
 
-    public Task<ResponseDto<NoContent>> ChangePasswordAsync(ChangePasswordDto changePasswordDto)
+    public async Task<ResponseDto<NoContent>> ChangePasswordAsync(ChangePasswordDto changePasswordDto)
     {
-        throw new NotImplementedException();
+        try
+        {
+            if (changePasswordDto.UserName == null)
+            {
+                return ResponseDto<NoContent>.Fail("Username yanlış", StatusCodes.Status404NotFound);
+            }
+            var user = await _userManager.FindByNameAsync(changePasswordDto.UserName!);
+            if (user == null)
+            {
+                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı!", StatusCodes.Status404NotFound);
+            }
+
+            var isValidPassword = await _userManager.CheckPasswordAsync(user, changePasswordDto.CurrentPassword!);
+            if (!isValidPassword)
+            {
+                return ResponseDto<NoContent>.Fail("Mevcut Şifre Hatalı!", StatusCodes.Status404NotFound);
+            }
+
+            var result = await _userManager.ChangePasswordAsync(user, changePasswordDto.CurrentPassword!, changePasswordDto.NewPassword!);
+            if (!result.Succeeded)
+            {
+                return ResponseDto<NoContent>.Fail
+                (
+                    result.Errors.Select(x => x.Description).ToList(), StatusCodes.Status400BadRequest
+                );
+            }
+            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+
+        }
+        catch (System.Exception ex)
+        {
+            return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+        }
     }
 
-    public Task<ResponseDto<NoContent>> ForgotPasswordAsync(ForgotPasswordDto forgotPasswordDto)
+    public async Task<ResponseDto<NoContent>> ForgotPasswordAsync(ForgotPasswordDto forgotPasswordDto)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPasswordDto.Email!);
+            if (user == null)
+            {
+                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı!", StatusCodes.Status404NotFound);
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var resetLink = $"http://lochalhost:5220/auth/resetpassword?token={token}&email={forgotPasswordDto.Email}";
+            var htmlBody = $"<p>Şifrenizi sıfırlamak için aşağıdaki linke tıklayınız!:</p> <a href='{resetLink}'>Şifre Yenileme Sayfası</a>";
+            var response = await _emailManager.SendEmailAsync(
+                forgotPasswordDto.Email!,
+                "EShop Şİfre Sıfırlama Talebi",
+                htmlBody
+             );
+
+            if (!response.IsSuccessful)
+            {
+                return ResponseDto<NoContent>.Fail(response.Error!, response.StatusCode);
+
+            }
+            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+        }
+        catch (System.Exception ex)
+        {
+            return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+        }
     }
 
     public async Task<ResponseDto<TokenDto>> LoginAsync(LoginDto loginDto)
@@ -115,9 +178,27 @@ public class AuthManager : IAuthService
         }
     }
 
-    public Task<ResponseDto<NoContent>> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
+    public async Task<ResponseDto<NoContent>> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
     {
-        throw new NotImplementedException();
+
+        try
+        {
+            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email!);
+            if (user == null)
+            {
+                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı", StatusCodes.Status404NotFound);
+            }
+            var result = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token!, resetPasswordDto.Password!);
+            if (!result.Succeeded)
+            {
+                return ResponseDto<NoContent>.Fail("şifre sıfırlama sırasında bir sorun oluştu.", StatusCodes.Status400BadRequest);
+            }
+            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+        }
+        catch (Exception ex)
+        {
+            return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+        }
     }
 
     private async Task<TokenDto> GenerateJwtToken(ApplicationUser user)
