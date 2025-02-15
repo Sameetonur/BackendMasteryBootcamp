@@ -2932,11 +2932,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Data\\EShop.Data.csproj",
+      "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Data\\EShop.Data.csproj",
       "projectName": "EShop.Data",
-      "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Data\\EShop.Data.csproj",
+      "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Data\\EShop.Data.csproj",
       "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Data\\obj\\",
+      "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2958,11 +2958,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Entity\\EShop.Entity.csproj": {
-              "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Entity\\EShop.Entity.csproj"
+            "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj": {
+              "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj"
             },
-            "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Shared\\EShop.Shared.csproj": {
-              "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Shared\\EShop.Shared.csproj"
+            "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Shared\\EShop.Shared.csproj": {
+              "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Shared\\EShop.Shared.csproj"
             }
           }
         }

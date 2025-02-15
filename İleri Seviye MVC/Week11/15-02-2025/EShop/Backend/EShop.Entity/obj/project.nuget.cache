@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jSzim+nRsYU=",
+  "dgSpecHash": "cdg1U1eiFdU=",
   "success": true,
-  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\03-API\\Week10\\08-02-2025\\EShop\\EShop.Entity\\EShop.Entity.csproj",
+  "projectFilePath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week11\\15-02-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samet\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.11\\microsoft.aspnetcore.cryptography.internal.8.0.11.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.11\\microsoft.aspnetcore.cryptography.keyderivation.8.0.11.nupkg.sha512",
