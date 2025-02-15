@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @await Html.PartialAsync("LayoutPartials/_HeadPartial")
+    @await Html.PartialAsync("LayoutPartials/_StylePartial")
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        @await Html.PartialAsync("LayoutPartials/_PreloaderPartial")
+
+        <!-- Navbar -->
+        @await Html.PartialAsync("LayoutPartials/_TopNavPartial")
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        @await Html.PartialAsync("LayoutPartials/_MainSideBarPartial")
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            @RenderBody()
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        @await Html.PartialAsync("LayoutPartials/_FooterPartial")
+
+        <!-- Control Sidebar -->
+
+    </div>
+    <!-- ./wrapper -->
+    
+    @await Html.PartialAsync("LayoutPartials/_ScriptPartial")
+</body>
+
+</html>

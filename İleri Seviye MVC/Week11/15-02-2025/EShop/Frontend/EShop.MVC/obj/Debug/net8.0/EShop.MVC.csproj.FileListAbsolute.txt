@@ -1,0 +1,58 @@
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\appsettings.Development.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\appsettings.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.staticwebassets.runtime.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.exe
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.deps.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.runtimeconfig.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.pdb
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.MvcApplicationPartsAssemblyInfo.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.RazorAssemblyInfo.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.RazorAssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets.build.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets.development.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.EShop.MVC.Microsoft.AspNetCore.StaticWebAssets.props
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.build.EShop.MVC.props
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EShop.MVC.props
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EShop.MVC.props
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets.pack.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\scopedcss\bundle\EShop.MVC.styles.css
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\refint\EShop.MVC.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.pdb
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.genruntimeconfig.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\09-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\ref\EShop.MVC.dll
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\appsettings.Development.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\appsettings.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.staticwebassets.runtime.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.exe
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.deps.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.runtimeconfig.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.dll
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\bin\Debug\net8.0\EShop.MVC.pdb
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.GeneratedMSBuildEditorConfig.editorconfig
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.AssemblyInfoInputs.cache
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.AssemblyInfo.cs
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.csproj.CoreCompileInputs.cache
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.MvcApplicationPartsAssemblyInfo.cache
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.RazorAssemblyInfo.cache
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.RazorAssemblyInfo.cs
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.sourcelink.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets.build.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets.development.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.EShop.MVC.Microsoft.AspNetCore.StaticWebAssets.props
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.build.EShop.MVC.props
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EShop.MVC.props
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EShop.MVC.props
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\staticwebassets.pack.json
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\scopedcss\bundle\EShop.MVC.styles.css
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.dll
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\refint\EShop.MVC.dll
+d:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\EShop.MVC.genruntimeconfig.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Frontend\EShop.MVC\obj\Debug\net8.0\ref\EShop.MVC.dll
