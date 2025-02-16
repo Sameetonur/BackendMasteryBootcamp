@@ -1,0 +1,124 @@
+@model List<CategoryModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Kategoriler</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                    <li class="breadcrumb-item active">Kategoriler</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <table id="entity-table" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Kategori</th>
+                                    <th>Aktif</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(var category in Model)
+                                {
+                                    <tr>
+                                        <td>@category.Id</td>
+                                        <td>
+                                            <img src="@($"http://localhost:5210{category.ImageUrl}")" 
+                                            class="img-fluid "
+                                             width="50" />
+                                             <span>@category.Name</span>
+                                        </td>
+                                        <td>  
+                                            <form asp-area="Admin" asp-controller="Category" asp-action="UpdateIsActive" id="category-form-@category.Id" >
+                                            <div class="icheck-primary d-inline">
+                                                <input type="hidden" name="id" value="@category.Id">
+                                                <input type="checkbox" id="category-@category.Id" asp-for="@category.IsActive" onclick="document.getElementById('category-form-@category.Id').submit()">
+                                                
+                                                <label for="category-@category.Id">
+                                                </label>
+                                            </div>
+                                            </form>
+                                            
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning btn-sm" href="">Düzenle</a>
+                                            <a class="btn btn-danger btn-sm" href="">Sil</a>
+                                        </td>
+                                    </tr>
+                                }
+                               
+                            </tbody>
+                          
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+@section StylesSection
+{
+    <link rel="stylesheet" href="~/Admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+}
+
+@section ScriptSection
+{
+    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $("#entity-table").DataTable({
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "language": {
+                    "info": "_TOTAL_ kayıttan _START_ -- _END_ arasındakiler gösteriliyor.",
+                    "infoEmpty": "Kayıt yok!",
+                    "emptyTable": "Kayıt getirilemedi!",
+                    "infoFiltered": "(_MAX_ kayıt içerisinde bulunan)",
+                    "infoThousands": ".",
+                    "lengthMenu": "Bir sayfada _MENU_ kayıt görünsün",
+                    "paginate": {
+                        "first": "İlk",
+                        "last": "Son",
+                        "next": "Sonraki",
+                        "previous": "Önceki"
+                    },
+                    "search": "Ara"
+                }
+            });
+        });
+    </script>
+}
