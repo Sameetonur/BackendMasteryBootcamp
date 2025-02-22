@@ -106,12 +106,12 @@ public class AuthManager : IAuthService
     {
         try
         {
-            var user = await _userManager.FindByNameAsync(loginDto.UserName);
+            var user = await _userManager.FindByNameAsync(loginDto.UserName!);
             if (user == null)
             {
                 return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı", StatusCodes.Status400BadRequest);
             }
-            var isValidPassword = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+            var isValidPassword = await _userManager.CheckPasswordAsync(user, loginDto.Password!);
             if (!isValidPassword)
             {
                 return ResponseDto<TokenDto>.Fail("Kullanıcı adı veya şifre hatalı", StatusCodes.Status400BadRequest);
@@ -131,7 +131,7 @@ public class AuthManager : IAuthService
     {
         try
         {
-            var existingUser = await _userManager.FindByNameAsync(registerDto.UserName);
+            var existingUser = await _userManager.FindByNameAsync(registerDto.UserName!);
             if (existingUser != null)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten kullanılmakta", StatusCodes.Status400BadRequest);
@@ -149,12 +149,12 @@ public class AuthManager : IAuthService
                 Address = registerDto.Address,
                 City = registerDto.City
             };
-            var result = await _userManager.CreateAsync(user, registerDto.Password);
+            var result = await _userManager.CreateAsync(user, registerDto.Password!);
             if (!result.Succeeded)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı oluşturulurken bir hata oluştu", StatusCodes.Status400BadRequest);
             }
-            result = await _userManager.AddToRoleAsync(user, registerDto.Role);
+            result = await _userManager.AddToRoleAsync(user, registerDto.Role!);
             if (!result.Succeeded)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı rolü atanırken bir hata oluştu", StatusCodes.Status400BadRequest);
@@ -209,11 +209,11 @@ public class AuthManager : IAuthService
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             }.Union(roles.Select(x => new Claim(ClaimTypes.Role, x)));
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfig.Secret));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfig.Secret!));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expiry = DateTime.Now.AddDays(Convert.ToDouble(_jwtConfig.AccessTokenExpiration));
 

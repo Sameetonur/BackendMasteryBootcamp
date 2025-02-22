@@ -59,7 +59,7 @@ namespace EShop.API.Controllers
             return CreateResult(response);
         }
 
-        // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
