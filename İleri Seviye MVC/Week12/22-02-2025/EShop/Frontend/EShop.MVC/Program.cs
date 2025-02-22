@@ -41,6 +41,8 @@ builder.Services.AddHttpClient<IHttpClientService, HttpClientService>(client =>
     client.BaseAddress = new Uri(builder.Configuration.GetSection("ApiSettings:BaseUrl").Value!);
 });
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();

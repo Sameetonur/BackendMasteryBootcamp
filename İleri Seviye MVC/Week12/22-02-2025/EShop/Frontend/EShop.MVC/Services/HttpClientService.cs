@@ -167,7 +167,7 @@ namespace EShop.MVC.Services
             {
                 // API'dan başarılı ama içeriği boş bir yanıt döndüyse
                 return (TResponse)Activator.CreateInstance(typeof(TResponse))!;
-            }""
+            }
             try
             {
                 var result = JsonSerializer.Deserialize<TResponse>(responseContent, _jsonSerializerOptions);
