@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\23-02-2025\EShop\Frontend\EShop.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week12/23-02-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week12/23-02-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week12/23-02-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

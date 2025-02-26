@@ -10,7 +10,7 @@ namespace EShop.MVC.Areas.Admin.Models
         [Display(Name = "Kategori")]
         [Required(ErrorMessage = "Kategori adı zorunludur.")]
         [StringLength(100, ErrorMessage = "Kategori adı en fazla 100 karakter olmalıdır.")]
-        public string? Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Display(Name = "Kategori Açıklaması")]
         [StringLength(300, ErrorMessage = "Kategori açıklaması en fazla 300 karakter olmalıdır.")]

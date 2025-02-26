@@ -15,7 +15,6 @@ namespace EShop.MVC.Areas.Admin.Models
         public string? Description { get; set; }
 
         [Display(Name = "Kategori Görseli")]
-        [Required(ErrorMessage = "Kategori görseli zorunludur.")]
         public IFormFile? Image { get; set; }
     }
 }
