@@ -98,7 +98,7 @@ namespace EShop.MVC.Services
         public async Task<TResponse?> PostFormAsync<TResponse>(string endpoint, MultipartFormDataContent formData)
         {
             await SetAuthorizationHeader();
-            
+
             var response = await _httpClient.PostAsync(endpoint, formData);
             var responseContent = await response.Content.ReadAsStringAsync();
             if (string.IsNullOrWhiteSpace(responseContent) && response.IsSuccessStatusCode)
@@ -151,7 +151,7 @@ namespace EShop.MVC.Services
         public async Task<TResponse?> PutFormAsync<TResponse>(string endpoint, MultipartFormDataContent formData)
         {
             await SetAuthorizationHeader();
- 
+
             var response = await _httpClient.PutAsync(endpoint, formData);
             var responseContent = await response.Content.ReadAsStringAsync();
             if (string.IsNullOrWhiteSpace(responseContent) && response.IsSuccessStatusCode)

@@ -10,8 +10,9 @@
             <div class="col-sm-6">
                 <h1>Kategoriler</h1>
             </div>
-            <div class="col-sm-6 d-flex juastify-content-end">
-               <a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn btn-primary btn-sm"><i class="fas fa-plus mr-1"></i> Yeni Kategori</a>
+            <div class="col-sm-6 d-flex justify-content-end">
+                <a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn btn-primary btn-sm"><i
+                        class="fas fa-plus mr-1"></i>Yeni Kategori</a>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -44,20 +45,18 @@
                                             <span>@category.Name</span>
                                         </td>
                                         <td>
-                                            <form asp-area="Admin" asp-controller="Category" asp-action="UpdateIsActive"
-                                                id="category-form-@category.Id">
-                                                <input type="hidden" name="id" value="@category.Id">
-                                                <div class="icheck-primary d-inline">
-                                                    <input asp-for="@category.IsActive" type="checkbox"
-                                                        id="category-@category.Id"
-                                                        onclick="document.getElementById('category-form-@category.Id').submit()">
-                                                    <label for="category-@category.Id">
-                                                    </label>
-                                                </div>
-                                            </form>
+                                            <div class="custom-control custom-switch">
+                                                <input class="custom-control-input update-status"
+                                                    type="checkbox" @(category.IsActive ? "checked":"")
+                                                    id="category-@category.Id" data-id="@category.Id"/>
+                                                    <label class="custom-control-label" for="category-@category.Id">
+                                                </label>
+                                            </div>
+                                   
                                         </td>
                                         <td>
-                                            <a asp-area="Admin" asp-action="Edit" asp-controller="Category" asp-route-id="id" class="btn btn-warning btn-sm" href="">Düzenle</a>
+                                            <a asp-area="Admin" asp-controller="Category" asp-action="Edit"
+                                                asp-route-id="@category.Id" class="btn btn-warning btn-sm">Düzenle</a>
                                             <a class="btn btn-danger btn-sm" href="">Sil</a>
                                         </td>
                                     </tr>
@@ -118,6 +117,28 @@
                         "previous": "Önceki"
                     },
                     "search": "Ara"
+                }
+            });
+        });
+        
+        $(document).on('change','.update-status',function(){
+            const categoryId = $(this).data('id');
+            const switchButton = $(this);
+            const label = switchButton.next('label');
+            const isActive = switchButton.prop('checked');
+
+            // CSRF token'ı alacağız
+
+            $.ajax({
+                url: '@Url.Action("UpdateIsActive")', // /admin/category/updateisactive
+                type: 'POST',
+                data: {id: categoryId},
+                success:function(response){
+                    // sweetalert modal'ı kullanacağız
+                    console.log(response);
+                },
+                error:function(err){
+                    console.log(err);
                 }
             });
         });

@@ -11,7 +11,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-
+    @await Component.InvokeAsync("NToastNotify")
     <div class="wrapper">
 
         @await Html.PartialAsync("LayoutPartials/_PreloaderPartial")

@@ -1,7 +1,6 @@
 using EShop.MVC.Models;
 using EShop.MVC.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using NToastNotify;
 
 namespace EShop.MVC.Controllers
