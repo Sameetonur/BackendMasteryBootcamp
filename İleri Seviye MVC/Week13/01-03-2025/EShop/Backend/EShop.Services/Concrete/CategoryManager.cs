@@ -206,7 +206,10 @@ namespace EShop.Services.Concrete
         {
             try
             {
-                var category = await _categoryRepository.GetAsync(x => x.Id == id);
+                var category = await _categoryRepository.GetAsync(
+                   predicate: x => x.Id == id,
+                   showIsDeleted: true
+                    );
                 if (category == null)
                 {
                     return ResponseDto<NoContent>.Fail("Kategori bulunamadığı için silme ya da geri alma işlemi yapılamadı!", StatusCodes.Status404NotFound);

@@ -10,6 +10,9 @@
             <div class="col-sm-6">
                 <h1>Silinmiş Kategoriler</h1>
             </div>
+            <div class="col-sm-6 dflex justify-content-end">
+
+            </div>
         </div>
     </div><!-- /.container-fluid -->
 </section>
@@ -39,9 +42,10 @@
                                                 width="50" />
                                             <span>@category.Name</span>
                                         </td>
-                                       
+
                                         <td>
-                                            <button type="button" class="btn btn-danger btn-sm" onclick="hardDeleteCategory(@category.Id)">Kalıcı Sil</button>
+                                            <button type="button" class="btn btn-danger btn-sm"
+                                                onclick="hardDeleteCategory(@category.Id)">Kalıcı Sil</button>
                                             <button type="button" class="btn btn-info btn-sm"
                                                 onclick="restoreCategory(@category.Id)">Geri Al</button>
                                         </td>
@@ -109,8 +113,8 @@
                 }
             });
         });
-        
-        $(document).on('change','.update-status',function(){
+
+        $(document).on('change', '.update-status', function () {
             const categoryId = $(this).data('id');
             const switchButton = $(this);
             const label = switchButton.next('label');
@@ -121,63 +125,107 @@
             $.ajax({
                 url: '@Url.Action("UpdateIsActive")', // /admin/category/updateisactive
                 type: 'POST',
-                data: {id: categoryId},
-                success:function(response){
+                data: { id: categoryId },
+                success: function (response) {
                     // sweetalert modal'ı kullanacağız
                     console.log(response);
                 },
-                error:function(err){
+                error: function (err) {
                     console.log(err);
                 }
             });
         });
-    
-        function hardDeleteCategory(categoryId){
-            Swal.fire({ 
-                title:"Kalıcı Silmek istediğinizden emin misiniz?",
-                text:"Bu İşlem geri alınamaz!",
-                icon:"warning",
-                showCancelButton:true,
-                confirmButtonColor:"#d33",
-                cancelButtonColor:"#6c757d",
-                confirmButtonText:"Evet, Kalıcı Olarak Sil",
-                cancelButtonText:"Vazgeç",
-            }).then(function(result){
-                if(result.isConfirmed){
+
+        function hardDeleteCategory(categoryId) {
+            Swal.fire({
+                title: "Kalıcı Silmek istediğinizden emin misiniz?",
+                text: "Bu İşlem geri alınamaz!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#6c757d",
+                confirmButtonText: "Evet, Kalıcı Olarak Sil",
+                cancelButtonText: "Vazgeç",
+            }).then(function (result) {
+                if (result.isConfirmed) {
                     $.ajax({
-                    url:'/Admin/Category/HardDelete/' + categoryId,
-                    type:'DELETE',
-                    success:function(response){
-                        if(response.isSuccessful){
+                        url: '/Admin/Category/HardDelete/' + categoryId,
+                        type: 'DELETE',
+                        success: function (response) {
+                            if (response.isSuccessful) {
+                                Swal.fire({
+                                    title: "İşlem Başarılı!",
+                                    text: "Kategori başarıyla kalıcı olarak silindi!",
+                                    icon: "success"
+                                }).then(function () {
+                                    window.location.reload()
+                                })
+                            } else {
+                                Swal.fire({
+                                    title: "İşlem Başarısız Oldu!",
+                                    text: response.error || "Kategori kalıcı olarak silinmeye çalışılırken bir sorun oluştu!",
+                                    icon: "error"
+                                })
+                            }
+                        },
+                        error: function (err) {
                             Swal.fire({
-                                title: "İşlem Başarılı!",
-                                text: "Kategori başarıyla kalıcı olarak silindi!",
-                                icon: "success"
-                            }).then(function(){
-                                window.location.reload()
-                            })
-                        }else{
-                            Swal.fire({
-                                title: "İşlem Başarısız Oldu!",
-                                text: response.error || "Kategori kalıcı olarak silinmeye çalışılırken bir sorun oluştu!",
-                                icon: "error"
-                            })
-                        }
-                    },
-                    error:function(err){
-                        Swal.fire({
                                 title: "İşlem Başarısız!",
                                 text: err || "Kategori kalıcı silinirken bir sorun oluştu!",
                                 icon: "error"
                             })
-                       }
+                        }
                     })
                 }
-            
 
+
+            })
+        }
+
+
+        function restoreCategory(categoryId) {
+            Swal.fire({
+                title: "Çöp kutusundan çıkarma!",
+                text: "Bu kategoriyi çöp kutusundan çıkarmak istediğinizden emin misiniz?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#6c757d",
+                confirmButtonText: "Evet, Kalıcı Olarak Sil",
+                cancelButtonText: "Vazgeç",
+            }).then(function (result) {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '/Admin/Category/Restore/' + categoryId,
+                        type: 'POST',
+                        success: function (response) {
+                            if (response.isSuccessful) {
+                                Swal.fire({
+                                    title: "İşlem Başarılı!",
+                                    text: "Kategori başarıyla geri alındı!",
+                                    icon: "success"
+                                }).then(function () {
+                                    window.location.reload()
+                                })
+                            } else {
+                                Swal.fire({
+                                    title: "İşlem Başarısız Oldu!",
+                                    text: response.error || "Kategori geri alınmaya çalışılırken bir sorun sorun oldu!",
+                                    icon: "error"
+                                })
+                            }
+                        },
+                        error: function (err) {
+                            Swal.fire({
+                                title: "İşlem Başarısız!",
+                                text: err || "Kategori geri alınmaya çalışılırken bir sorun oluştu!",
+                                icon: "error"
+                            })
+                        }
+                    })
+                }
             })
         }
     </script>
     @* "url": "https://cdn.datatables.net/plug-ins/1.10.22/i18n/tr.json" *@
 }
-

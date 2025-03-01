@@ -120,5 +120,12 @@ namespace EShop.MVC.Areas.Admin.Controllers
             var response = await _categoryService.GetAllDeletedAsync();
             return View(response.Data ??[]);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Restore(int id)
+        {
+            var response = await _categoryService.SoftDeleteAsync(id);
+            return Json(new {isSuccessful = response.IsSuccessful, error=response.Error});
+        }
     }
 }
