@@ -21,7 +21,7 @@ namespace EShop.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(ProductCreateDto productCreateDto)
         {
-            //Kategorisiz ürün kaydetme sorunumuz var, ilgileneceğiz.
+            
             var response = await _productManager.AddAsync(productCreateDto);
             return CreateResult(response);
         }
@@ -68,7 +68,7 @@ namespace EShop.API.Controllers
         }
 
         [HttpGet("get/all/active")]
-        public async Task<IActionResult> GetAll([FromQuery] bool isActive)
+        public async Task<IActionResult> GetAll([FromQuery] bool isActive = true)
         {
             var response = await _productManager.GetAllAsync(isActive);
             return CreateResult(response);

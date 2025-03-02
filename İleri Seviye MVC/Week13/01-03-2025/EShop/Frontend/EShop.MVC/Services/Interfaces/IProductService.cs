@@ -6,7 +6,7 @@ namespace EShop.MVC.Services.Interfaces;
 
 public interface IProductService
 {
-    Task<ResponseModel<List<ProductModel>>> GetAllActiveAsync();
+    Task<ResponseModel<List<ProductModel>>> GetAllActiveAsync(bool IsActive = true);
     Task<ResponseModel<List<ProductModel>>> GetAllAsync();
     Task<ResponseModel<List<ProductModel>>> GetAllDeletedAsync();
     Task<ResponseModel<ProductModel>> GetByIdAsync();
