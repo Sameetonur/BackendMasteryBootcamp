@@ -9,7 +9,7 @@ public interface IProductService
     Task<ResponseModel<List<ProductModel>>> GetAllActiveAsync(bool IsActive = true);
     Task<ResponseModel<List<ProductModel>>> GetAllAsync();
     Task<ResponseModel<List<ProductModel>>> GetAllDeletedAsync();
-    Task<ResponseModel<ProductModel>> GetByIdAsync();
+    Task<ResponseModel<ProductModel>> GetByIdAsync(int id);
     Task<ResponseModel<ProductModel>> CreateAsync(ProductCreateModel productCreateModel);
     Task<ResponseModel<ProductModel>> UpdateAsync(ProductUpdateModel productUpdateModel);
 

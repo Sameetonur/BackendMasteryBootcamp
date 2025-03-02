@@ -53,29 +53,34 @@ namespace EShop.MVC.Services
             return response!;
         }
 
-        public Task<ResponseModel<List<ProductModel>>> GetAllAsync()
+        public async Task<ResponseModel<List<ProductModel>>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var response = await _httpClientService.GetAsync<ResponseModel<List<ProductModel>>>("products/get/all");
+            return response!;
         }
 
-        public Task<ResponseModel<List<ProductModel>>> GetAllDeletedAsync()
+        public async Task<ResponseModel<List<ProductModel>>> GetAllDeletedAsync()
         {
-            throw new NotImplementedException();
+            var response = await _httpClientService.GetAsync<ResponseModel<List<ProductModel>>>("products/get/all/deleted");
+            return response!;
         }
 
-        public Task<ResponseModel<ProductModel>> GetByIdAsync()
+        public async Task<ResponseModel<ProductModel>> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var response = await _httpClientService.GetAsync<ResponseModel<ProductModel>>($"products/get/{id}");
+            return response!;
         }
 
-        public Task<ResponseModel<NoContent>> HardDeleteAsync(int id)
+        public async Task<ResponseModel<NoContent>> HardDeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var response = await _httpClientService.DeleteAsync<ResponseModel<NoContent>>($"products/harddelete/{id}");
+            return response!;
         }
 
-        public Task<ResponseModel<NoContent>> SoftDeleteAsync(int id)
+        public async Task<ResponseModel<NoContent>> SoftDeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var response = await _httpClientService.DeleteAsync<ResponseModel<NoContent>>($"products/solftdelete/{id}");
+            return response!;
         }
 
         public async Task<ResponseModel<ProductModel>> UpdateAsync(ProductUpdateModel productUpdateModel)
@@ -103,9 +108,10 @@ namespace EShop.MVC.Services
             return response!;
         }
 
-        public Task<ResponseModel<NoContent>> UpdateIsActiveAsync(int id)
+        public async Task<ResponseModel<NoContent>> UpdateIsActiveAsync(int id)
         {
-            throw new NotImplementedException();
+            var response = await _httpClientService.PutAsync<object,ResponseModel<NoContent>>($"products/updateisactive/{id}",null!);
+            return response!;
         }
     }
 }

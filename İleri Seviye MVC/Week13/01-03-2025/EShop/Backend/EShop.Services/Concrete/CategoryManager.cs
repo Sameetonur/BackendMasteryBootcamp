@@ -130,15 +130,15 @@ namespace EShop.Services.Concrete
 
         public async Task<ResponseDto<IEnumerable<CategoryDto>>> GetAllDeletedAsync()
         {
-           try
-           {
-             var categories = await _categoryRepository.GetAllAsync(
-                predicate: x=>x.IsDeleted,
-                showIsDeleted: true
-             );
+            try
+            {
+                var categories = await _categoryRepository.GetAllAsync(
+                   predicate: x => x.IsDeleted,
+                   showIsDeleted: true
+                );
                 if (!categories.Any())
                 {
-                    
+
                     return ResponseDto<IEnumerable<CategoryDto>>.Fail($" Silinmiş kategori bulunamadı!", StatusCodes.Status404NotFound);
                 }
                 var categoryDtos = _mapper.Map<IEnumerable<CategoryDto>>(categories);
@@ -284,14 +284,14 @@ namespace EShop.Services.Concrete
             }
         }
 
-        public async Task<ResponseDto<bool>> UpdateIsActiveAsync(int id)
+        public async Task<ResponseDto<NoContent>> UpdateIsActiveAsync(int id)
         {
             try
             {
                 var category = await _categoryRepository.GetAsync(x => x.Id == id);
                 if (category == null)
                 {
-                    return ResponseDto<bool>.Fail("Kategori bulunamadığı için aktiflik durumu güncellenemedi!", StatusCodes.Status404NotFound);
+                    return ResponseDto<NoContent>.Fail("Kategori bulunamadığı için aktiflik durumu güncellenemedi!", StatusCodes.Status404NotFound);
                 }
                 var hasProducts = await _unitOfWork.GetRepository<ProductCategory>().ExistsAsync(x => x.CategoryId == id);
                 if (hasProducts)
@@ -304,13 +304,13 @@ namespace EShop.Services.Concrete
                 var result = await _unitOfWork.SaveAsync();
                 if (result < 1)
                 {
-                    return ResponseDto<bool>.Fail("Kategori aktiflik durumu güncellenirken bir hata oluştu!", StatusCodes.Status500InternalServerError);
+                    return ResponseDto<NoContent>.Fail("Kategori aktiflik durumu güncellenirken bir hata oluştu!", StatusCodes.Status500InternalServerError);
                 }
-                return ResponseDto<bool>.Success(category.IsActive, StatusCodes.Status200OK);
+                return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
             }
             catch (Exception ex)
             {
-                return ResponseDto<bool>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+                return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
             }
         }
     }
