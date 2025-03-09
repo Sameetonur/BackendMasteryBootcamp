@@ -1,0 +1,183 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EShop.MVC
+build_property.RootNamespace = EShop.MVC
+build_property.ProjectDir = D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week14\09-03-2025\EShop\Frontend\EShop.MVC\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week14\09-03-2025\EShop\Frontend\EShop.MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Category/Trash.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcVHJhc2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Product/Trash.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxUcmFzaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/Components/UserPanel/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlclBhbmVsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_HeadPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9IZWFkUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_LeftMenuPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9MZWZ0TWVudVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_MainSidebarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9NYWluU2lkZWJhclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_MessagesMenuPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9NZXNzYWdlc01lbnVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_NotificationsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9Ob3RpZmljYXRpb25zUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_PreloaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9QcmVsb2FkZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_ScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_StylesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9TdHlsZXNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/LayoutPartials/_TopNavPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXExheW91dFBhcnRpYWxzXF9Ub3BOYXZQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_BannerPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfQmFubmVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_BrandPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfQnJhbmRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_CategoryPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfQ2F0ZWdvcnlQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_ExcluisivePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfRXhjbHVpc2l2ZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_FeaturesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfRmVhdHVyZXNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_ProductListPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfUHJvZHVjdExpc3RQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/Others/_RelatedProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE90aGVyc1xfUmVsYXRlZFByb2R1Y3RQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_HeaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_ScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_StylesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHlsZXNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHubb/BackendMasteryBootcamp/İleri Seviye MVC/Week14/09-03-2025/EShop/Frontend/EShop.MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
