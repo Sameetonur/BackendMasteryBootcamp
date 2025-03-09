@@ -27,7 +27,7 @@ namespace EShop.MVC.Models
         public object ApplicationUser { get; set; } = null!;
 
         [JsonPropertyName("cartItems")]
-        public List<object> CartItems { get; set; } = [];
+        public List<CartItemModel> CartItems { get; set; } = [];
 
         [JsonPropertyName("totalAmount")]
         public decimal TotalAmount { get; set; }

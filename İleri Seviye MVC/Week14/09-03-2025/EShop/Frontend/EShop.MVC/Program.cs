@@ -41,6 +41,7 @@ builder.Services.AddHttpClient<IHttpClientService, HttpClientService>(client =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICartService, CartService>();
 
 builder.Services.AddHttpContextAccessor();
 var app = builder.Build();

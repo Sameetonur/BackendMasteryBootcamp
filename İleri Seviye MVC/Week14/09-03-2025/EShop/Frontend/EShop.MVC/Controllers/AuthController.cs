@@ -5,6 +5,7 @@ using NToastNotify;
 
 namespace EShop.MVC.Controllers
 {
+
     public class AuthController : Controller
     {
         private readonly IAuthService _authService;
