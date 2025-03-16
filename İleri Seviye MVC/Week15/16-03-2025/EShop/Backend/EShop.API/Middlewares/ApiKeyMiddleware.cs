@@ -22,7 +22,8 @@ namespace EShop.API.Middlewares
                 endpoint.Contains("/api/auth/") ||
                 endpoint.Contains("/api/auth") ||
                 endpoint.Contains("/api/apiclient") ||
-                endpoint.EndsWith("/api/categories") && context.Request.Method == "GET"
+                endpoint.EndsWith("/api/categories") ||
+                endpoint.Contains("https://eshopapi.enginniyazi.com/") && context.Request.Method == "GET"
             ))
             {
                 await _next(context);
