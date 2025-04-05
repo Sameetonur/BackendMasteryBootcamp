@@ -834,40 +834,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samet\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj",
       "projectName": "EShop.Entity",
-      "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj",
-      "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Entity\\obj\\",
+      "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Entity\\EShop.Entity.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Entity\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Shared\\EShop.Shared.csproj": {
-              "projectPath": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Shared\\EShop.Shared.csproj"
+            "C:\\Users\\pc\\Documents\\GitHub\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Shared\\EShop.Shared.csproj": {
+              "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week14\\08-03-2025\\EShop\\Backend\\EShop.Shared\\EShop.Shared.csproj"
             }
           }
         }
